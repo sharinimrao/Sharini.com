@@ -5,6 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sharini.com — Substack</title>
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+  .post-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 5px 5px 0 var(--cream-dark), 0 2px 20px rgba(255,107,74,0.08);
+    border: 2px solid var(--cream-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  .post-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--coral), 0 4px 24px rgba(255,107,74,0.15);
+  }
+  .post-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0; height: 10px;
+    background: var(--white);
+    clip-path: polygon(0% 100%, 3% 0%, 7% 100%, 11% 20%, 15% 100%, 20% 10%, 24% 100%, 28% 30%, 32% 100%, 37% 5%, 41% 100%, 45% 15%, 50% 100%, 55% 0%, 59% 100%, 63% 20%, 67% 100%, 72% 10%, 76% 100%, 80% 0%, 84% 100%, 88% 30%, 92% 100%, 96% 15%, 100% 100%);
+  }
+  .post-date { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grapefruit); }
+  .post-title { font-family: var(--brush); font-size: 1.5rem; color: var(--espresso); line-height: 1.15; }
+  .post-desc { font-size: 0.9rem; color: var(--espresso-soft); line-height: 1.55; }
+  .post-link { font-size: 0.88rem; font-weight: 700; color: var(--grapefruit); border-bottom: 2px solid currentColor; align-self: flex-start; margin-top: 0.25rem; }
+  .post-link:hover { opacity: 0.7; }
+  .feed-loading { color: var(--espresso-soft); font-size: 0.9rem; font-style: italic; }
+  #posts-grid { display: flex; flex-direction: column; gap: 1.25rem; max-width: 680px; }
+</style>
 </head>
 <body>
 <div class="shell">
@@ -16,7 +48,7 @@
         <li><a href="../index.html"><span class="nav-icon">✦</span><span class="nav-label">About</span></a></li>
         <li><a href="../experience/index.html"><span class="nav-icon">⚡</span><span class="nav-label">Experience</span></a></li>
         <li><a href="index.html" class="active"><span class="nav-icon">✍️</span><span class="nav-label">Substack</span></a></li>
-        <li><a href="../projects/index.html"><span class="nav-icon">⚡</span><span class="nav-label">Projects</span></a></li>
+        <li><a href="../projects/index.html"><span class="nav-icon">🛠️</span><span class="nav-label">Projects</span></a></li>
         <li><a href="../contact/index.html"><span class="nav-icon">💌</span><span class="nav-label">Contact</span></a></li>
       </ul>
       <div class="sidebar-footer">© 2026 Sharini</div>
@@ -26,20 +58,64 @@
     <header class="page-header">
       <p class="page-eyebrow">Writing</p>
       <h1 class="page-title">Substack</h1>
-      <p class="page-lede">Essays, dispatches, and things I can't stop thinking about. New posts when inspiration strikes.</p>
+      <p class="page-lede">Somewhere between a long walk and a long paragraph.</p>
     </header>
     <section class="content-section">
-      <div class="coming-soon">
-        <div class="coming-soon-emoji">✍️</div>
-        <h2>Posts coming soon</h2>
-        <p>Working on some writing worth sharing. Subscribe to get notified when the first post drops.</p>
-        <div style="margin-top:1.5rem;">
-          <a href="#" class="btn">Subscribe on Substack →</a>
-        </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+        <a href="https://substack.com/@sharinir" target="_blank" class="btn">Read on Substack →</a>
+        <a href="https://substack.com/@sharinir" target="_blank" class="btn" style="background:transparent;color:var(--espresso);border-color:var(--espresso);">Subscribe →</a>
       </div>
+
+      <p class="section-label">Latest posts</p>
+      <div id="posts-grid">
+        <p class="feed-loading">Loading posts...</p>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="https://substack.com/@sharinir" target="_blank" class="text-link" style="font-size:0.9rem;">See all posts →</a>
+      </div>
+
     </section>
   </main>
 </div>
+<script>
+async function loadPosts() {
+  const grid = document.getElementById('posts-grid');
+  try {
+    // Use RSS2JSON proxy to fetch Substack RSS (avoids CORS)
+    const rssUrl = encodeURIComponent('https://sharinir.substack.com/feed');
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&count=10`;
+    const res = await fetch(apiUrl);
+    const data = await res.json();
+
+    if (!data.items || data.items.length === 0) {
+      grid.innerHTML = `<div class="post-card"><p class="post-desc">No posts yet — <a href="https://substack.com/@sharinir" target="_blank" class="post-link">subscribe to be first to know</a> when something drops.</p></div>`;
+      return;
+    }
+
+    grid.innerHTML = data.items.map(item => {
+      const date = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      // strip HTML from description
+      const tmp = document.createElement('div');
+      tmp.innerHTML = item.description || '';
+      const desc = (tmp.textContent || '').slice(0, 160).trim();
+      return `
+        <div class="post-card">
+          <p class="post-date">${date}</p>
+          <h3 class="post-title">${item.title}</h3>
+          ${desc ? `<p class="post-desc">${desc}${desc.length === 160 ? '…' : ''}</p>` : ''}
+          <a href="${item.link}" target="_blank" class="post-link">Read →</a>
+        </div>`;
+    }).join('');
+
+  } catch (e) {
+    grid.innerHTML = `<div class="post-card"><p class="post-desc">Couldn't load posts right now — <a href="https://substack.com/@sharinir" target="_blank" class="post-link">read them directly on Substack →</a></p></div>`;
+  }
+}
+
+loadPosts();
+</script>
 </body>
 </html>
 
