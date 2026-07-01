@@ -11,12 +11,12 @@
   <nav class="sidebar">
     <div class="sidebar-inner">
       <div class="wordmark">Sharini.com</div>
-      <div class="citrus-spin">⚡</div>
+      <div class="citrus-spin">🛠️</div>
       <ul class="nav-links">
         <li><a href="../index.html"><span class="nav-icon">✦</span><span class="nav-label">About</span></a></li>
-        <li><a href="../cooking/index.html"><span class="nav-icon">🍋</span><span class="nav-label">Cooking</span></a></li>
+        <li><a href="../experience/index.html"><span class="nav-icon">⚡</span><span class="nav-label">Experience</span></a></li>
         <li><a href="../substack/index.html"><span class="nav-icon">✍️</span><span class="nav-label">Substack</span></a></li>
-        <li><a href="index.html" class="active"><span class="nav-icon">⚡</span><span class="nav-label">Projects</span></a></li>
+        <li><a href="index.html" class="active"><span class="nav-icon">🛠️</span><span class="nav-label">Projects</span></a></li>
         <li><a href="../contact/index.html"><span class="nav-icon">💌</span><span class="nav-label">Contact</span></a></li>
       </ul>
       <div class="sidebar-footer">© 2026 Sharini</div>
@@ -24,18 +24,40 @@
   </nav>
   <main class="main">
     <header class="page-header">
-      <p class="page-eyebrow">Building</p>
+      <p class="page-eyebrow">Things I've built</p>
       <h1 class="page-title">Projects</h1>
-      <p class="page-lede">Things I've built, shipped, and open-sourced. Code lives on GitHub.</p>
+      <p class="page-lede">Personal and research projects — from group dining apps to RAG-powered medical assistants.</p>
     </header>
     <section class="content-section">
-      <div class="coming-soon">
-        <div class="coming-soon-emoji">⚡</div>
-        <h2>Projects incoming</h2>
-        <p>Documenting my work and writing up case studies. Back soon with the full lineup.</p>
-        <div style="margin-top:1.5rem;">
-          <a href="https://github.com/sharinimrao" target="_blank" class="btn">View GitHub →</a>
+      <p class="section-label">Featured</p>
+      <div class="grid">
+
+        <div class="card">
+          <span class="tag tag-pop">In Progress</span>
+          <h3 class="card-title">NutriPath</h3>
+          <p style="color:var(--espresso-soft);font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">RAG-Grounded Medical Meal Planning Assistant</p>
+          <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.55;margin-bottom:0.75rem;">Built a retrieval-augmented generation pipeline over cited clinical dietary rules for chronic conditions, using sentence-transformer embeddings and cosine-similarity search backed by Redis. Encoded condition-specific safety logic (CKD lab/stage-gating, IBS eating-disorder safeguards) to prevent unsafe dietary recommendations.</p>
+          <div style="margin-bottom:0.75rem;">
+            <span class="tag">RAG</span><span class="tag">Redis</span><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">PyTorch</span>
+          </div>
+          <a href="https://github.com/sharinimrao" target="_blank" class="text-link" style="font-size:0.9rem;">View on GitHub →</a>
         </div>
+
+        <div class="card">
+          <span class="tag">Personal Project</span>
+          <h3 class="card-title">Foogle</h3>
+          <p style="color:var(--espresso-soft);font-size:0.85rem;font-weight:600;margin-bottom:0.5rem;">Real-Time Group Dining Preference Matcher</p>
+          <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.55;margin-bottom:0.75rem;">Full-stack mobile app using the PERN stack to streamline group restaurant discovery and synchronize dining preferences concurrently within a live user room. Integrated geolocation APIs to parse real-time location data and dynamically rank restaurant recommendations using historical preference weights and group consensus.</p>
+          <div style="margin-bottom:0.75rem;">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Express</span><span class="tag">Geolocation API</span>
+          </div>
+          <a href="https://github.com/sharinimrao" target="_blank" class="text-link" style="font-size:0.9rem;">View on GitHub →</a>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <a href="https://github.com/sharinimrao" target="_blank" class="btn">See all on GitHub →</a>
       </div>
     </section>
   </main>

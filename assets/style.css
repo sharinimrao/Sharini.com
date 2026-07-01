@@ -11,7 +11,7 @@
   --cream-dark: #FFE8D6;
   --espresso:   #2B1810;
   --espresso-soft: #5C4A3D;
---hero-bg:    #C0392B;
+  --hero-bg:    #C0392B;
   --white:      #FFFFFF;
   --sidebar-w:  260px;
   --brush: 'Caveat Brush', cursive;
@@ -55,22 +55,19 @@ a { color: inherit; text-decoration: none; }
   z-index: 0;
 }
 
-/* flower rings - petal overlay using multiple radial gradients */
+/* flower rings */
 .sidebar::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    /* ring 1 - bottom right large */
     radial-gradient(circle at 110% 90%, transparent 55px, rgba(255,255,255,0.08) 56px, rgba(255,255,255,0.08) 70px, transparent 71px),
     radial-gradient(circle at 110% 90%, transparent 80px, rgba(255,255,255,0.06) 81px, rgba(255,255,255,0.06) 96px, transparent 97px),
     radial-gradient(circle at 110% 90%, transparent 108px, rgba(255,255,255,0.04) 109px, rgba(255,255,255,0.04) 124px, transparent 125px),
-    /* ring 2 - top right medium */
     radial-gradient(circle at 105% 8%, transparent 40px, rgba(255,255,255,0.09) 41px, rgba(255,255,255,0.09) 54px, transparent 55px),
     radial-gradient(circle at 105% 8%, transparent 62px, rgba(255,255,255,0.06) 63px, rgba(255,255,255,0.06) 76px, transparent 77px),
     radial-gradient(circle at 105% 8%, transparent 84px, rgba(255,255,255,0.04) 85px, rgba(255,255,255,0.04) 96px, transparent 97px),
-    /* ring 3 - mid right small */
     radial-gradient(circle at 115% 50%, transparent 30px, rgba(255,255,255,0.07) 31px, rgba(255,255,255,0.07) 42px, transparent 43px),
     radial-gradient(circle at 115% 50%, transparent 50px, rgba(255,255,255,0.05) 51px, rgba(255,255,255,0.05) 62px, transparent 63px);
   pointer-events: none;
@@ -106,7 +103,6 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
 }
 
-/* spinning citrus badge */
 .citrus-spin {
   display: inline-flex;
   align-items: center;
@@ -118,7 +114,6 @@ a { color: inherit; text-decoration: none; }
   border: 2px dashed rgba(255,255,255,0.4);
   margin-bottom: 2rem;
   animation: spin 12s linear infinite;
-  cursor: default;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -134,7 +129,6 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255,255,255,0.92);
   padding: 0.6rem 0.8rem;
   border-radius: 12px;
-  position: relative;
   transition: all 0.2s ease;
 }
 
@@ -203,51 +197,40 @@ a { color: inherit; text-decoration: none; }
 .hero-content { position: relative; z-index: 1; }
 
 .hero-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--citrus);
-  margin-bottom: 0.5rem;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--citrus); margin-bottom: 0.5rem;
 }
 
 .hero-name {
   font-family: var(--brush);
   font-size: clamp(4rem, 8vw, 7rem);
-  line-height: 0.9;
-  color: var(--white);
-  text-shadow: 4px 4px 0 rgba(192,57,43,0.6), 8px 8px 0 rgba(249,68,112,0.25);
+  line-height: 0.9; color: var(--white);
+  text-shadow: 4px 4px 0 rgba(100,20,10,0.4), 8px 8px 0 rgba(249,68,112,0.2);
   transform: rotate(-1.5deg);
-  display: inline-block;
-  margin-bottom: 0.75rem;
+  display: inline-block; margin-bottom: 0.75rem;
 }
 
 .hero-lede {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
-  max-width: 560px;
-  line-height: 1.7;
+  font-size: 1.05rem; color: rgba(255,255,255,0.85);
+  max-width: 560px; line-height: 1.7;
 }
 
 /* ===== CONTENT ===== */
-.content-section { padding: 3rem 4rem 4rem; position: relative; }
+.content-section { padding: 3rem 4rem 4rem; }
 
-/* ===== PAGE HEADER (inner pages) ===== */
+/* ===== PAGE HEADER ===== */
 .page-header {
   padding: 3.5rem 4rem 2.5rem;
-  position: relative;
-  overflow: hidden;
+  position: relative; overflow: hidden;
   background: var(--hero-bg);
 }
 
 .page-header::after {
   content: '';
-  position: absolute;
-  top: -60px; right: -60px;
+  position: absolute; top: -60px; right: -60px;
   width: 280px; height: 280px;
   background: radial-gradient(circle, rgba(255,107,74,0.5) 0%, transparent 65%);
-  border-radius: 50%;
-  z-index: 0;
+  border-radius: 50%; z-index: 0;
 }
 
 .page-eyebrow {
@@ -260,7 +243,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--brush);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.95; color: var(--white);
-  text-shadow: 3px 3px 0 rgba(192,57,43,0.5);
+  text-shadow: 3px 3px 0 rgba(100,20,10,0.3);
   transform: rotate(-1deg); display: inline-block;
   margin-bottom: 0.5rem; position: relative; z-index: 1;
 }
@@ -271,13 +254,86 @@ a { color: inherit; text-decoration: none; }
   position: relative; z-index: 1; margin-top: 0.75rem;
 }
 
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--coral), var(--citrus), transparent);
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+/* dot on the line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 8px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--coral);
+  border: 3px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--coral);
+  transform: translateX(50%);
+  margin-left: -1px;
+}
+
+.timeline-date {
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--grapefruit); margin-bottom: 0.3rem;
+}
+
+.timeline-role {
+  font-family: var(--brush);
+  font-size: 1.7rem; color: var(--espresso);
+  line-height: 1.1; margin-bottom: 0.15rem;
+}
+
+.timeline-company {
+  font-size: 0.9rem; font-weight: 600;
+  color: var(--coral); margin-bottom: 0.75rem;
+}
+
+.timeline-bullets {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-bullets li {
+  font-size: 0.9rem; color: var(--espresso-soft);
+  line-height: 1.55; padding-left: 1rem;
+  position: relative;
+}
+
+.timeline-bullets li::before {
+  content: '✦';
+  position: absolute; left: 0;
+  color: var(--citrus); font-size: 0.6rem;
+  top: 0.35rem;
+}
+
 /* ===== CARDS ===== */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
 
 .card {
   background: var(--white);
-  border-radius: 16px;
-  padding: 1.75rem;
+  border-radius: 16px; padding: 1.75rem;
   box-shadow: 5px 5px 0 var(--cream-dark), 0 2px 20px rgba(255,107,74,0.1);
   border: 2px solid var(--cream-dark);
   position: relative;
@@ -313,6 +369,7 @@ a { color: inherit; text-decoration: none; }
   border: 1.5px solid rgba(255,107,74,0.25);
 }
 .tag-pop { background: var(--grapefruit); color: var(--white); border-color: var(--grapefruit); }
+.tag-dark { background: var(--espresso); color: var(--white); border-color: var(--espresso); }
 
 .btn {
   display: inline-flex; align-items: center; gap: 0.4rem;
@@ -320,7 +377,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--white); background: var(--espresso);
   padding: 0.8rem 1.75rem; border-radius: 999px;
   border: 2px solid var(--espresso);
-  transition: all 0.18s ease; letter-spacing: 0.02em;
+  transition: all 0.18s ease;
 }
 .btn:hover {
   background: var(--grapefruit); border-color: var(--grapefruit);
@@ -351,12 +408,11 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.12);
 }
 
-/* ===== COMING SOON (template pages) ===== */
+/* coming soon */
 .coming-soon {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  min-height: 400px; text-align: center;
-  padding: 4rem;
+  min-height: 400px; text-align: center; padding: 4rem;
 }
 .coming-soon-emoji { font-size: 4rem; margin-bottom: 1rem; animation: bounce 2s ease-in-out infinite; }
 @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
@@ -376,6 +432,8 @@ a { color: inherit; text-decoration: none; }
   .hero-name { font-size: 3.5rem; }
   .page-title { font-size: 2.75rem; }
   .sidebar-footer { display: none; }
+  .timeline { padding-left: 1.5rem; }
+  .timeline-item { padding-left: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
