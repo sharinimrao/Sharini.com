@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharini.com — About</title>
+<title>Sharini.com — Home</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -11,15 +11,13 @@
   <nav class="sidebar">
     <div class="sidebar-inner">
       <div class="wordmark">Sharini.com</div>
-      <div class="citrus-spin">🍊</div>
+      <div class="citrus-spin">🐝</div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active"><span class="nav-icon">✦</span><span class="nav-label">About</span></a></li>
-        <li><a href="experience/index.html"><span class="nav-icon">⚡</span><span class="nav-label">Experience</span></a></li>
-        <li><a href="substack/index.html"><span class="nav-icon">✍️</span><span class="nav-label">Substack</span></a></li>
+        <li><a href="index.html" class="active"><span class="nav-icon">🏡</span><span class="nav-label">Home</span></a></li>
+        <li><a href="about/index.html"><span class="nav-icon">🌼</span><span class="nav-label">About</span></a></li>
         <li><a href="projects/index.html"><span class="nav-icon">🛠️</span><span class="nav-label">Projects</span></a></li>
-        <li><a href="contact/index.html"><span class="nav-icon">💌</span><span class="nav-label">Contact</span></a></li>
+        <li><a href="resume.pdf" target="_blank"><span class="nav-icon">📄</span><span class="nav-label">Resume</span></a></li>
       </ul>
-      <div class="sidebar-footer">© 2026 Sharini</div>
     </div>
   </nav>
   <main class="main">
@@ -27,79 +25,52 @@
       <div class="hero-content">
         <p class="hero-eyebrow">Hi, I'm</p>
         <h1 class="hero-name">Sharini!</h1>
-        <p class="hero-lede">Data Science student at UC Berkeley interested in software engineering, machine learning, and product design. Passionate about building scalable, user-centered products at the intersection of technology, consumer experiences, and social impact.</p>
+        <p class="hero-lede">Data Science student at UC Berkeley building at the intersection of software, consumer products, and social impact.</p>
       </div>
     </section>
     <section class="content-section">
-      <p class="section-label">Background</p>
-      <div class="grid" style="margin-bottom:2.5rem;">
-        <div class="card">
-          <h3 class="card-title">Origin story</h3>
-          <p style="color:var(--espresso-soft);font-size:0.95rem;line-height:1.65;">Born and raised in <strong>North Carolina and Iowa</strong> and continued the westward expansion to the Bay area for undergrad.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Currently</h3>
-          <p style="color:var(--espresso-soft);font-size:0.95rem;line-height:1.65;">Studying <strong>Data Science</strong> (concentration in Business & Analytics) at <strong>UC Berkeley</strong>, plus pursuing the <strong>SCET certificate</strong>.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">What I'm about</h3>
-          <p style="color:var(--espresso-soft);font-size:0.95rem;line-height:1.65;">Building at the intersection of <strong>technology, consumer experiences, and social impact</strong>. Focused on B2C innovation — products that are scalable, user-centered, and actually make people's lives better.</p>
-        </div>
-        <div class="stripe-block">
-          <h3 style="font-family:var(--brush);font-size:1.65rem;margin-bottom:0.5rem;">Let's talk</h3>
-          <p style="font-size:0.9rem;opacity:0.9;margin-bottom:1.25rem;line-height:1.6;">Whether it's a collab, an opportunity, or just a hello — my inbox is open.</p>
-          <a href="contact/index.html" class="btn" style="background:white;color:var(--espresso);border-color:white;font-size:0.85rem;">Say Hi →</a>
-        </div>
+
+      <p class="section-label">Find me</p>
+      <div class="info-row" style="margin-bottom:3rem;">
+        <a href="mailto:sharinimrao@gmail.com" class="social-link"><span class="social-icon">✉️</span>sharinimrao@gmail.com</a>
+        <a href="https://linkedin.com/in/sharinirao" target="_blank" class="social-link"><span class="social-icon">💼</span>linkedin.com/in/sharinirao</a>
+        <a href="https://github.com/sharinimrao" target="_blank" class="social-link"><span class="social-icon">🐙</span>github.com/sharinimrao</a>
+        <span class="social-link" style="cursor:default;"><span class="social-icon">📍</span>Berkeley, CA</span>
       </div>
 
-      <p class="section-label">Technical Skills</p>
-      <div style="margin-bottom:2.5rem;">
-        <span class="tag tag-dark">Java</span>
-        <span class="tag tag-dark">Python</span>
-        <span class="tag tag-dark">SQL</span>
-        <span class="tag tag-dark">TypeScript</span>
-        <span class="tag tag-dark">JavaScript</span>
-        <span class="tag tag-dark">MATLAB</span>
-        <span class="tag tag-pop">React</span>
-        <span class="tag tag-pop">Next.js</span>
-        <span class="tag tag-pop">Node.js</span>
-        <span class="tag tag-pop">TensorFlow</span>
-        <span class="tag tag-pop">PyTorch</span>
-        <span class="tag tag-pop">Scikit-learn</span>
-        <span class="tag">Git</span>
-        <span class="tag">Figma</span>
-        <span class="tag">Vercel</span>
-        <span class="tag">Tableau</span>
-        <span class="tag">A/B Testing</span>
-        <span class="tag">Statistical Modeling</span>
+      <p class="section-label">Selected work</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+
+        <div class="card">
+          <span class="tag">Production Work</span>
+          <h3 class="card-title">Legali AI</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;">Shipped 7 production pages for an AI-powered legal-tech platform using Next.js, React, and Figma-to-code workflows.</p>
+          <a href="projects/index.html#legali-ai" class="text-link" style="font-size:0.85rem;display:inline-block;margin-top:0.75rem;">View case study →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Personal Project</span>
+          <h3 class="card-title">NutriPath</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;">A RAG-grounded meal planning assistant grounded in cited clinical dietary rules across 6 chronic conditions.</p>
+          <a href="projects/index.html#nutripath" class="text-link" style="font-size:0.85rem;display:inline-block;margin-top:0.75rem;">View case study →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Personal Project</span>
+          <h3 class="card-title">FedUp</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;">A real-time group dining decision app with AI-curated picks and live multiplayer voting rooms.</p>
+          <a href="projects/index.html#fedup" class="text-link" style="font-size:0.85rem;display:inline-block;margin-top:0.75rem;">View case study →</a>
+        </div>
+
       </div>
 
-      <p class="section-label">Outside the work</p>
-      <div class="grid">
-        <div class="card">
-          <div style="font-size:2rem;margin-bottom:0.5rem;">🏃‍♀️</div>
-          <h3 class="card-title">Outdoors</h3>
-          <p style="color:var(--espresso-soft);font-size:0.9rem;">Hiking, running, tennis — if it's outside I'm probably into it.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:2rem;margin-bottom:0.5rem;">🎨</div>
-          <h3 class="card-title">Visual Arts</h3>
-          <p style="color:var(--espresso-soft);font-size:0.9rem;">Creating things with my hands keeps me sane when I'm too deep in code.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:2rem;margin-bottom:0.5rem;">🍳</div>
-          <h3 class="card-title">Cooking</h3>
-          <p style="color:var(--espresso-soft);font-size:0.9rem;">Recipes, experiments, and the occasional disaster worth writing about.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:2rem;margin-bottom:0.5rem;">✈️</div>
-          <h3 class="card-title">Journalism & Travel</h3>
-          <p style="color:var(--espresso-soft);font-size:0.9rem;">Telling stories — whether that's through writing or going somewhere new.</p>
-        </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:3rem;">
+        <a href="projects/index.html" class="btn">See all projects →</a>
+        <a href="about/index.html" class="text-link" style="font-size:0.9rem;">Read my full story →</a>
       </div>
+
     </section>
   </main>
 </div>
 </body>
 </html>
-
