@@ -30,8 +30,21 @@
   /* reusable bee glyph — honey body, espresso detail. works on cream or honey backgrounds */
   --bee-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Cellipse cx='9.5' cy='4.2' rx='3.6' ry='2.3' fill='%232D2A26' opacity='.28' transform='rotate(-18 9.5 4.2)'/%3E%3Cellipse cx='14' cy='4.2' rx='3.6' ry='2.3' fill='%232D2A26' opacity='.28' transform='rotate(18 14 4.2)'/%3E%3Cellipse cx='11.5' cy='8' rx='5.4' ry='4' fill='%23F4A300'/%3E%3Cpath d='M6.4 8h10.2M7.2 5.6h9M7.2 10.4h9' stroke='%232D2A26' stroke-width='1.3' stroke-linecap='round'/%3E%3Ccircle cx='5.6' cy='7.3' r='2.1' fill='%232D2A26'/%3E%3Cpath d='M4.3 5.4l-1-1.3M6.6 5.1l.3-1.6' stroke='%232D2A26' stroke-width='.9' stroke-linecap='round'/%3E%3C/svg%3E");
 
-  /* line-drawn flower flourish — sage stem/leaf, blush petals, honey center */
-  --flower-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 92C30 70 26 55 34 38' fill='none' stroke='%238FA05C' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M30 68C24 64 18 65 14 60' fill='none' stroke='%238FA05C' stroke-width='1.4' stroke-linecap='round'/%3E%3Cellipse cx='34' cy='20' rx='7' ry='11' fill='none' stroke='%23E8B4B8' stroke-width='1.4'/%3E%3Cellipse cx='34' cy='20' rx='7' ry='11' fill='none' stroke='%23E8B4B8' stroke-width='1.4' transform='rotate(72 34 20)'/%3E%3Cellipse cx='34' cy='20' rx='7' ry='11' fill='none' stroke='%23E8B4B8' stroke-width='1.4' transform='rotate(144 34 20)'/%3E%3Cellipse cx='34' cy='20' rx='7' ry='11' fill='none' stroke='%23E8B4B8' stroke-width='1.4' transform='rotate(216 34 20)'/%3E%3Cellipse cx='34' cy='20' rx='7' ry='11' fill='none' stroke='%23E8B4B8' stroke-width='1.4' transform='rotate(288 34 20)'/%3E%3Ccircle cx='34' cy='20' r='4' fill='%23F4A300'/%3E%3C/svg%3E");
+
+
+  /* line-icon set — replaces platform emoji with a consistent monochrome mark set (recolored via currentColor) */
+  --icon-home: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 11.5 12 4l8 7.5' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 10v9.5a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1V10' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --icon-flower: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='7.2' r='3.4' fill='%23000'/%3E%3Ccircle cx='12' cy='16.8' r='3.4' fill='%23000'/%3E%3Ccircle cx='7.2' cy='12' r='3.4' fill='%23000'/%3E%3Ccircle cx='16.8' cy='12' r='3.4' fill='%23000'/%3E%3Ccircle cx='12' cy='12' r='2.6' fill='%23000'/%3E%3C/svg%3E");
+  --icon-tools: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.5 3.5a4.2 4.2 0 0 0-5.6 5.6L3 15l3 3 5.9-5.9a4.2 4.2 0 0 0 5.6-5.6l-2.6 2.6-2.2-.5-.5-2.2 2.3-2.3z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+  --icon-doc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 2.5h8l5 5v13.5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-17.5a1 1 0 0 1 1-1z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M14.5 2.5v5h5' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M8.5 13h7M8.5 16.5h7' stroke='%23000' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  --icon-mail: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2.5' y='5' width='19' height='14' rx='2' fill='none' stroke='%23000' stroke-width='1.6'/%3E%3Cpath d='M3 6.2 12 13l9-6.8' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --icon-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.5 14.5 14.5 9.5' stroke='%23000' stroke-width='1.7' stroke-linecap='round'/%3E%3Cpath d='M11 8.3 12.7 6.6a3.2 3.2 0 0 1 4.5 4.5L15.5 12.8' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 15.7 11.3 17.4a3.2 3.2 0 0 1-4.5-4.5L8.5 11.2' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --icon-code: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.5 6.5 3 12l5.5 5.5M15.5 6.5 21 12l-5.5 5.5' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --icon-pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.5s7-7.2 7-12.3a7 7 0 0 0-14 0c0 5.1 7 12.3 7 12.3z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='9.2' r='2.4' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E");
+  --icon-mountain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.5 19 9 8l3.5 5.5L15 10l6.5 9z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+  --icon-palette: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3a8.5 8.5 0 0 0 0 17c1.4 0 2-.9 2-2 0-.6-.3-1-.6-1.4-.3-.4-.5-.7-.5-1.2 0-.9.7-1.4 1.6-1.4H16a4.5 4.5 0 0 0 4.5-4.5C20.5 5.6 16.7 3 12 3z' fill='none' stroke='%23000' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='8' cy='11' r='1.1' fill='%23000'/%3E%3Ccircle cx='9.5' cy='7.5' r='1.1' fill='%23000'/%3E%3Ccircle cx='14' cy='7' r='1.1' fill='%23000'/%3E%3Ccircle cx='16.5' cy='10' r='1.1' fill='%23000'/%3E%3C/svg%3E");
+  --icon-pot: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 11h16v1.5A6.5 6.5 0 0 1 13.5 19h-3A6.5 6.5 0 0 1 4 12.5z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M2.5 11h19M8 6.5c0-1 .8-1.3.8-2.3M12 6.5c0-1 .8-1.3.8-2.3M16 6.5c0-1 .8-1.3.8-2.3' stroke='%23000' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  --icon-paperplane: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.5 2.5 2.5 10.8l7 2.7 2.7 7z' fill='none' stroke='%23000' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M21.5 2.5 9.5 13.5' stroke='%23000' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
 
   /* seamless-ish hexagon outline tile for the honeycomb texture wash */
   --hex-tile-honey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100M28 0L28 34' fill='none' stroke='%23F4A300' stroke-width='1.5'/%3E%3C/svg%3E");
@@ -119,16 +132,47 @@ a { color: inherit; text-decoration: none; }
 }
 
 .citrus-spin {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 32px; height: 32px;
-  font-size: 1.05rem;
   background: rgba(244,163,0,0.12);
   border-radius: 50%;
   border: 1.5px solid rgba(244,163,0,0.4);
   margin-bottom: 0;
+  font-size: 0;
+  color: transparent;
 }
+.citrus-spin::before {
+  content: '';
+  width: 18px; height: 13px;
+  background-image: var(--bee-icon);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ===== LINE-ICON UTILITIES (replace platform emoji, recolor via currentColor) ===== */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+}
+.icon-home     { -webkit-mask-image: var(--icon-home);     mask-image: var(--icon-home); }
+.icon-flower   { -webkit-mask-image: var(--icon-flower);   mask-image: var(--icon-flower); }
+.icon-tools    { -webkit-mask-image: var(--icon-tools);    mask-image: var(--icon-tools); }
+.icon-doc      { -webkit-mask-image: var(--icon-doc);      mask-image: var(--icon-doc); }
+.icon-mail     { -webkit-mask-image: var(--icon-mail);     mask-image: var(--icon-mail); }
+.icon-link     { -webkit-mask-image: var(--icon-link);     mask-image: var(--icon-link); }
+.icon-code     { -webkit-mask-image: var(--icon-code);     mask-image: var(--icon-code); }
+.icon-pin      { -webkit-mask-image: var(--icon-pin);      mask-image: var(--icon-pin); }
+.icon-mountain { -webkit-mask-image: var(--icon-mountain); mask-image: var(--icon-mountain); }
+.icon-palette  { -webkit-mask-image: var(--icon-palette);  mask-image: var(--icon-palette); }
+.icon-pot      { -webkit-mask-image: var(--icon-pot);      mask-image: var(--icon-pot); }
+.icon-paperplane { -webkit-mask-image: var(--icon-paperplane); mask-image: var(--icon-paperplane); }
 
 .nav-links {
   list-style: none;
@@ -152,7 +196,7 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.2s ease;
 }
 
-.nav-links li a .nav-icon { font-size: 1.05rem; flex-shrink: 0; }
+.nav-links li a .nav-icon { width: 15px; height: 15px; }
 
 .nav-links li a:hover {
   background: rgba(244,163,0,0.12);
@@ -201,18 +245,6 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid rgba(45,42,38,0.08);
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -10px; right: -10px;
-  width: 130px; height: 130px;
-  background-image: var(--flower-icon);
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.55;
-  z-index: 0;
-}
-
 .hero-content { position: relative; z-index: 1; }
 
 .hero-eyebrow {
@@ -243,17 +275,6 @@ a { color: inherit; text-decoration: none; }
   position: relative; overflow: hidden;
   background: var(--cream);
   border-bottom: 1px solid rgba(45,42,38,0.08);
-}
-
-.page-header::after {
-  content: '';
-  position: absolute; top: -14px; right: -6px;
-  width: 110px; height: 110px;
-  background-image: var(--flower-icon);
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
-  z-index: 0;
 }
 
 .page-eyebrow {
@@ -446,7 +467,10 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.18s ease;
 }
 .social-link:hover { border-color: var(--honey); color: var(--honey-deep); transform: translateY(-2px); }
-.social-icon { font-size: 1.1rem; flex-shrink: 0; }
+.social-icon { width: 16px; height: 16px; }
+
+/* ===== PURSUIT ICONS (About — Outside the work) ===== */
+.pursuit-icon { width: 28px; height: 28px; color: var(--honey-deep); margin-bottom: 0.6rem; }
 
 /* ===== IN-PAGE JUMP NAV (About) ===== */
 .subnav { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0 3rem; }
