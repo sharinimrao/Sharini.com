@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharini.com — Projects</title>
+<title>Sharini.com — Work</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -13,18 +13,16 @@
       <div class="wordmark">Sharini.com</div>
       <div class="citrus-spin"></div>
       <ul class="nav-links">
-        <li><a href="../index.html"><span class="nav-icon icon icon-home"></span><span class="nav-label">Home</span></a></li>
-        <li><a href="../about/index.html"><span class="nav-icon icon icon-flower"></span><span class="nav-label">About</span></a></li>
-        <li><a href="index.html" class="active"><span class="nav-icon icon icon-tools"></span><span class="nav-label">Projects</span></a></li>
+        <li><a href="../index.html"><span class="nav-icon icon icon-flower"></span><span class="nav-label">About</span></a></li>
+        <li><a href="index.html" class="active"><span class="nav-icon icon icon-tools"></span><span class="nav-label">Work</span></a></li>
         <li><a href="../resume.pdf" target="_blank"><span class="nav-icon icon icon-doc"></span><span class="nav-label">Resume</span></a></li>
       </ul>
-      <div class="sidebar-footer">© 2026 Sharini</div>
     </div>
   </nav>
   <main class="main">
     <header class="page-header">
       <p class="page-eyebrow">Things I've built</p>
-      <h1 class="page-title">Projects</h1>
+      <h1 class="page-title">Work</h1>
       <p class="page-lede">From RAG pipelines to hackathon classifiers — a mix of personal builds, research tools, and deployed products.</p>
     </header>
     <section class="content-section">
@@ -40,6 +38,17 @@
     <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">WCAG Accessibility</span>
   </div>
   <a href="https://lea.legali.ai/" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
+  <details class="case-study">
+    <summary>Case study</summary>
+    <dl>
+      <dt>Problem</dt>
+      <dd>Legali needed 7 production pages (quiz, warnings, referral, share, features, contributors, branding) shipped across web and mobile without slowing the broader engineering team down.</dd>
+      <dt>Approach</dt>
+      <dd>Translated Figma designs into production code with Next.js, React, and Node.js; built a 12-question interactive quiz with multi-step state management and Web Share API integration; kept locale consistency across 7 supported languages while merging PRs and resolving CI and rebase conflicts.</dd>
+      <dt>Outcome</dt>
+      <dd>7 production pages shipped with WCAG-compliant accessibility across every supported language, plus 6 production PRs merged cleanly into a multi-language, multi-platform codebase.</dd>
+    </dl>
+  </details>
 </div>
 
         <div class="card" id="nutripath">
@@ -51,6 +60,17 @@
     <span class="tag">RAG</span><span class="tag">Redis</span><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Sentence-Transformers</span>
   </div>
   <a href="https://github.com/sharinimrao/NutriPath" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
+  <details class="case-study">
+    <summary>Case study</summary>
+    <dl>
+      <dt>Problem</dt>
+      <dd>People managing chronic conditions like CKD or IBS need meal-planning guidance grounded in real clinical dietary rules — not generic AI suggestions that could be unsafe.</dd>
+      <dt>Approach</dt>
+      <dd>Built a RAG pipeline over 31 cited clinical dietary rules across 6 chronic conditions using sentence-transformer embeddings and cosine-similarity search backed by Redis, with condition-specific safety logic (CKD lab/stage-gating, IBS safeguards) to block unsafe recommendations.</dd>
+      <dt>Outcome</dt>
+      <dd>72% top-1 / 90% top-3 retrieval accuracy across a 29-case evaluation harness.</dd>
+    </dl>
+  </details>
 </div>
 
         <div class="card" id="fedup">
@@ -63,6 +83,17 @@
   </div>
   <a href="https://github.com/sharinimrao/Foogle" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
   <a href="https://forknife-it.vercel.app" target="_blank" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">View Live →</a>
+  <details class="case-study">
+    <summary>Case study</summary>
+    <dl>
+      <dt>Problem</dt>
+      <dd>Deciding where to eat as a group is slow and repetitive — there's no easy way to combine personal taste with what the whole group actually wants, in real time.</dd>
+      <dt>Approach</dt>
+      <dd>Designed the product in Figma and built it end-to-end in Next.js with Google OAuth and Postgres; built a friend-sourced recommendation engine on the Google Places API and Claude API; added real-time swipe-based group voting rooms with shareable codes via Redis and Pusher.</dd>
+      <dt>Outcome</dt>
+      <dd>A working full-stack app with synchronized multiplayer voting across devices and personalized picks that weight toward friends' saved restaurants.</dd>
+    </dl>
+  </details>
 </div>
 
         <div class="card">
@@ -74,6 +105,17 @@
     <span class="tag">Needfinding</span><span class="tag">Usability Testing</span><span class="tag">Dashboard Design</span><span class="tag">ROS</span>
   </div>
   <a href="https://puffin-railway-production.up.railway.app/dashboard" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
+  <details class="case-study">
+    <summary>Case study</summary>
+    <dl>
+      <dt>Problem</dt>
+      <dd>Drone club members were juggling a fragmented workflow — Docker, multiple repos, command-line tools — just to run and monitor a simulation.</dd>
+      <dt>Approach</dt>
+      <dd>Grounded the design in 4 needfinding interviews with drone club members and pilots, then designed a single dashboard consolidating PX4/Gazebo controls, live telemetry, ROS data, and the simulation view.</dd>
+      <dt>Outcome</dt>
+      <dd>Validated through 5 moderated think-aloud usability sessions, using task completion and intervention rate to find and fix navigation gaps.</dd>
+    </dl>
+  </details>
 </div>
 
         <div class="card">
@@ -86,6 +128,17 @@
   </div>
   <a href="https://github.com/sharinimrao/my-recipes" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
   <a href="https://my-recipes-dun.vercel.app" target="_blank" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">View Live →</a>
+  <details class="case-study">
+    <summary>Case study</summary>
+    <dl>
+      <dt>Problem</dt>
+      <dd>Wanted a personal home for recipes and the stories behind them, without the ad-heavy clutter of most recipe sites.</dd>
+      <dt>Approach</dt>
+      <dd>Built with Next.js, TypeScript, and Tailwind CSS, with category-filtered browsing and individual recipe pages.</dd>
+      <dt>Outcome</dt>
+      <dd>A clean, fast personal recipe blog live on Vercel.</dd>
+    </dl>
+  </details>
 </div>
 
         <div class="card">
@@ -97,6 +150,17 @@
             <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Feature Engineering</span><span class="tag">Decision Tree</span>
           </div>
           <a href="https://github.com/sharinimrao" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
+          <details class="case-study">
+            <summary>Case study</summary>
+            <dl>
+              <dt>Problem</dt>
+              <dd>C Light Technologies wanted to know whether eye-tracking data alone could reliably flag disease patterns.</dd>
+              <dt>Approach</dt>
+              <dd>Built end-to-end Python pipelines to parse high-frequency eye-tracking data, engineered 16 features, and trained a decision tree classifier.</dd>
+              <dt>Outcome</dt>
+              <dd>~70% classification accuracy, presented to C Light Technologies stakeholders alongside the business implications.</dd>
+            </dl>
+          </details>
         </div>
 
       </div>

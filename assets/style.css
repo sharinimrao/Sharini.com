@@ -482,6 +482,43 @@ a { color: inherit; text-decoration: none; }
 }
 .subnav a:hover { color: var(--honey-deep); border-color: var(--honey); }
 
+/* ===== HERO WITH PHOTO (About/landing) ===== */
+.hero-with-photo { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+.hero-photo {
+  width: 132px; height: 132px; flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid var(--honey);
+  background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--cream-dark);
+  color: var(--honey-deep);
+  font-family: var(--brush); font-style: italic; font-weight: 600;
+  font-size: 2.4rem;
+}
+
+/* ===== CASE STUDY (expandable, Projects cards) ===== */
+.case-study { margin-top: 0.9rem; border-top: 1px solid rgba(45,42,38,0.1); padding-top: 0.7rem; }
+.case-study summary {
+  cursor: pointer;
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--honey-deep);
+  list-style: none;
+}
+.case-study summary::-webkit-details-marker { display: none; }
+.case-study summary::after { content: '+'; margin-left: auto; font-size: 1rem; }
+.case-study[open] summary::after { content: '\2013'; }
+.case-study dl { margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.55rem; }
+.case-study dt { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--sage-deep); }
+.case-study dd { font-size: 0.85rem; color: var(--espresso-soft); line-height: 1.55; }
+
 /* coming soon */
 .coming-soon {
   display: flex; flex-direction: column;
