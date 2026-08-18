@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharini.com — Puffin Case Study</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-inner">
+      <div class="wordmark">Sharini.com</div>
+      <div class="citrus-spin"></div>
+      <ul class="nav-links">
+        <li><a href="../../index.html"><span class="nav-icon icon icon-flower"></span><span class="nav-label">About</span></a></li>
+        <li><a href="../index.html" class="active"><span class="nav-icon icon icon-tools"></span><span class="nav-label">Work</span></a></li>
+        <li><a href="../../resume.pdf" target="_blank"><span class="nav-icon icon icon-doc"></span><span class="nav-label">Resume</span></a></li>
+      </ul>
+      <div class="sidebar-footer">© 2026 Sharini</div>
+    </div>
+  </nav>
+  <main class="main">
+    <header class="page-header">
+      <p class="page-eyebrow">Case Study · Class Project</p>
+      <h1 class="page-title">Puffin</h1>
+      <p class="page-lede">Making drone simulation workflows more approachable through a browser-based control panel. A CS160 team project consolidating PX4, Gazebo, and ROS 2 setup, monitoring, and control into one dashboard.</p>
+      <div class="info-row" style="margin-top:1.5rem;">
+        <a href="http://puffin-demo.ddns.net" target="_blank" class="social-link"><span class="social-icon icon icon-tools"></span>Live prototype</a>
+        <a href="https://github.com/tim-nguyen0/puffin/" target="_blank" class="social-link"><span class="social-icon icon icon-github"></span>Repository</a>
+        <a href="https://youtu.be/nnkPGmWjSJw" target="_blank" class="social-link"><span class="social-icon icon icon-paperplane"></span>Demo video</a>
+      </div>
+    </header>
+
+    <section class="content-section">
+
+      <p style="color:var(--espresso-soft);font-size:0.85rem;margin-bottom:2.5rem;">With Tim Nguyen, Cody Wang, Anjana Niranjanan, and Tien Pham · UC Berkeley, CS160</p>
+
+      <nav class="subnav">
+        <a href="#needfinding">Needfinding</a>
+        <a href="#ideation">Ideation</a>
+        <a href="#prototypes">Prototypes</a>
+        <a href="#hifi">Hi-Fi</a>
+        <a href="#build">Build</a>
+        <a href="#evaluate">Evaluate</a>
+        <a href="#next">What's Next</a>
+      </nav>
+
+      <p class="section-label">Overview</p>
+      <div class="grid" style="margin-bottom:3.5rem;">
+        <div class="card">
+          <h3 class="card-title">The Problem</h3>
+          <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.6;">Running a drone simulation meant specialized knowledge of PX4, Gazebo, and ROS 2 spread across multiple repositories, Docker services, and command-line tools — a fragmented, Linux-oriented workflow that made onboarding a recurring burden for technical leads and blocked non-programming teammates from testing independently.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Who It Serves</h3>
+          <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.6;">Programming leads tired of repeat onboarding, mechanical/aerospace teammates who could design a test but not run one, and FPV pilots and builders with a wide range of technical depth.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">The Response</h3>
+          <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.6;">Puffin, a browser-based dashboard placed in front of the existing simulation stack — one interface for simulation startup, process health, visualization, telemetry, vehicle controls, ROS information, and terminal access.</p>
+        </div>
+      </div>
+
+      <p class="section-label" id="needfinding">Needfinding</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.65;margin-bottom:1.5rem;max-width:760px;">We ran four interview and observation sessions with people who had different relationships to drones and simulation. All names are pseudonyms.</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <h3 class="card-title">Glen</h3>
+          <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">UAV Club Programming Lead</p>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Walked us through a Gazebo/PX4/Docker/VNC setup with no clear signal of progress or readiness — onboarding fell repeatedly on him.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Greg</h3>
+          <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Club President, Aerospace</p>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Mechanical and aerospace teammates could design meaningful tests but stayed dependent on programmers to run and interpret them.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Haskell</h3>
+          <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Aerial Photographer, FPV Pilot</p>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Showed that users skip relevant steps when the information they need is inconvenient to access.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Britt</h3>
+          <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">FPV Pilot, Drone Builder</p>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Described simulators that assumed substantial prior knowledge, reinforcing that capability isn't enough without legible system state.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:3.5rem;">
+        <dl class="case-study" style="border:none;padding:0;margin:0;">
+          <dt>Requirements we translated the research into</dt>
+          <dd>Visible entry point (start without knowing every repo), legible system state (readiness, health, telemetry, actions), centralized investigation (controls and diagnostics in one place), and layered technical depth (support beginners without hiding what developers need).</dd>
+        </dl>
+      </div>
+
+      <p class="section-label" id="ideation">Ideation</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.65;margin-bottom:1.5rem;max-width:760px;">First-draft concepts ranged from a cross-platform launcher to natural-language controls to a physical behavior-card library. We narrowed to three, then selected one.</p>
+      <div class="grid" style="margin-bottom:3.5rem;">
+        <div class="card">
+          <span class="tag tag-pop">Selected</span>
+          <h3 class="card-title">Consolidated Dashboard</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Directly addressed the multi-repository and dependency issue, reached the broadest user group, and stayed easy to update and extend.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Mobile Pre-Flight Checklist</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Solved the pre-flight problem but lacked technical complexity and didn't address our most pressing needfinding insight.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Behavior Library + Physical Cards</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">A tangible card-and-QR-code system that lacked technical specificity and adaptability.</p>
+        </div>
+      </div>
+
+      <p class="section-label" id="prototypes">Paper Prototypes</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <h3 class="card-title">Prototype 1 — Dashboard-First</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Visible controls and simple status updates designed to feel approachable.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Prototype 2 — Terminal-Forward</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Package upload and process information, closer to existing robotics tools.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:3.5rem;">
+        <dl class="case-study" style="border:none;padding:0;margin:0;">
+          <dt>Testing with three participant types</dt>
+          <dd><strong>Programmer</strong> valued cross-platform access and technical visibility, wanted more logging and control granularity, slightly preferred Prototype 2. <strong>Builder</strong> valued direct controls and natural-language information, preferred Prototype 1. <strong>Beginner</strong> found Prototype 1 approachable but overwhelming in options, and Prototype 2's terminal unfamiliar without intuitive cues.</dd>
+          <dt>Key finding</dt>
+          <dd>Accessibility and technical depth aren't mutually exclusive. The next version combined Prototype 1's approachable dashboard with Prototype 2's logs, process visibility, and deeper controls.</dd>
+        </dl>
+      </div>
+
+      <p class="section-label" id="hifi">High-Fidelity Iteration</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <h3 class="card-title">Design 1</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Dense service health, telemetry, mission progress, and terminal — strong visibility, but competing top-level elements and heavy reliance on raw commands.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Design 2</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Run/Pause/Stop next to simulation status improved the state-to-action link, but the viewport stayed weak and terminal control raised error-prevention concerns.</p>
+        </div>
+        <div class="card">
+          <span class="tag tag-pop">Foundation</span>
+          <h3 class="card-title">Design 3</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">A modular, light dashboard with familiar sidebar navigation — the most approachable structure, though labels needed explanation and color carried too much status meaning.</p>
+        </div>
+      </div>
+      <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.65;margin-bottom:3.5rem;max-width:760px;">We selected Design 3 as the foundation, then folded in Design 2's explicit controls and Design 1's technical detail. External critique reinforced this: one participant valued the ROS 2 graph for making node/topic relationships visible, the other valued a single place to check service health — both cases where users wanted Puffin to explain how the system's parts relate.</p>
+
+      <p class="section-label" id="build">Final Design & Build</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.65;margin-bottom:1.5rem;max-width:760px;">Puffin runs in three stages: enter through the launcher and check whether required processes are active (Start/Stop/Reset); monitor the drone through the viewport, telemetry, process state, flight mode, and arming state, with Arm/Takeoff/Land/Disarm controls and physical-controller support; and, if something goes wrong, inspect implicated processes without leaving the app. The Dashboard, ROS2 Services, ROS2 Graph, and a WebSocket-connected floating terminal cover simulation state, lifecycle control, node/topic visualization, and lower-level access respectively. The implemented offboard demo flies a 10m square via a ROS 2 lifecycle node through PX4 offboard setpoints.</p>
+      <div class="stat-row" style="margin-bottom:1.5rem;">
+        <div class="stat-tile"><div class="stat-number">29+</div><div class="stat-label">Automated backend tests</div></div>
+        <div class="stat-tile"><div class="stat-number">3</div><div class="stat-label">Primary user workflows verified</div></div>
+        <div class="stat-tile"><div class="stat-number">1</div><div class="stat-label">Unified browser dashboard</div></div>
+      </div>
+      <div style="margin-bottom:3.5rem;">
+        <span class="tag">PX4</span><span class="tag">Gazebo</span><span class="tag">ROS 2</span><span class="tag">Docker</span><span class="tag">WebSocket</span><span class="tag">REST API</span>
+      </div>
+
+      <p class="section-label" id="evaluate">Usability Evaluation</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.65;margin-bottom:1.5rem;max-width:760px;">Five moderated think-aloud sessions asked participants to start the simulation and confirm readiness, monitor an autonomous square flight and land the drone, then investigate and recover from a stopped simulation.</p>
+      <div class="stat-row" style="margin-bottom:2.5rem;">
+        <div class="stat-tile"><div class="stat-number">80%</div><div class="stat-label">Completed takeoff (4 of 5)</div></div>
+        <div class="stat-tile"><div class="stat-number">216.8s</div><div class="stat-label">Avg. successful takeoff time</div></div>
+        <div class="stat-tile"><div class="stat-number">1.8</div><div class="stat-label">Avg. facilitator interventions</div></div>
+        <div class="stat-tile"><div class="stat-number">4.0</div><div class="stat-label">Avg. critical features flagged missing</div></div>
+      </div>
+
+      <div class="timeline" style="margin-bottom:3.5rem;">
+        <div class="timeline-item">
+          <h3 class="timeline-role">Readiness was visible but not decisive</h3>
+          <p class="timeline-company">Users paused to determine whether the simulation, connection, or required services were active.</p>
+          <ul class="timeline-bullets">
+            <li><strong>Implication:</strong> one system-health summary connecting Gazebo, PX4 SITL, telemetry, process health, and blocking prerequisites to a clear readiness state.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-role">Control prerequisites were insufficiently explained</h3>
+          <p class="timeline-company">One user couldn't locate takeoff; another didn't realize teleop mode and arming came first.</p>
+          <ul class="timeline-bullets">
+            <li><strong>Implication:</strong> present readiness, mode selection, arming, and takeoff as an ordered pre-flight sequence; disabled controls should explain what's missing.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-role">Technical information was useful but fragmented</h3>
+          <p class="timeline-company">Experienced users valued the ROS Nodes and Graph pages; newer users didn't understand their purpose.</p>
+          <ul class="timeline-bullets">
+            <li><strong>Implication:</strong> preserve detailed views, but add plain-language explanations and group related spatial/status information.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-role">Failure detection didn't produce recovery</h3>
+          <p class="timeline-company">One user hit an unrecoverable viewport state with no reset control; warnings didn't explain what to do next.</p>
+          <ul class="timeline-bullets">
+            <li><strong>Implication:</strong> pair warnings with cause and a recommended action; add an in-app reset/reconnect path.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-role">Experience level changed what users needed</h3>
+          <p class="timeline-company">Newer users wanted onboarding and tooltips; experienced users wanted joystick control and more configurable telemetry.</p>
+          <ul class="timeline-bullets">
+            <li><strong>Implication:</strong> progressive disclosure — clear defaults for readiness/next-action/recovery, expandable depth for experienced users.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="section-label" id="next">What's Next</p>
+      <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.6;margin-bottom:1rem;max-width:760px;">Four priorities should precede any broader feature expansion — they most directly close the task-completion and independent-recovery gaps this evaluation found:</p>
+      <div style="margin-bottom:1.5rem;">
+        <span class="tag tag-dark">Guided pre-flight sequencing</span>
+        <span class="tag tag-dark">Centralized system-health panel</span>
+        <span class="tag tag-dark">Plain-language ROS explanations</span>
+        <span class="tag tag-dark">Reset/reconnect recovery controls</span>
+      </div>
+      <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.6;margin-bottom:1rem;max-width:760px;">Further out:</p>
+      <div style="margin-bottom:3rem;">
+        <span class="tag">GPS/heading visibility</span>
+        <span class="tag">Keyboard or joystick control</span>
+        <span class="tag">Top-down map view</span>
+        <span class="tag">Gazebo/PX4 readiness indicators</span>
+      </div>
+
+      <div class="stripe-block">
+        <p style="font-size:0.95rem;line-height:1.65;">Four of five participants completed takeoff, and the detailed ROS screens weren't extraneous complexity — for experienced users, they were among the most valuable features. The gap wasn't technical capability; it was that exposing backend state isn't the same as supporting recovery from it. A usable simulation interface needs to connect system state to meaning, meaning to action, and failure to recovery.</p>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <a href="../index.html" class="btn">← Back to Work</a>
+      </div>
+
+    </section>
+  </main>
+</div>
+</body>
+</html>
