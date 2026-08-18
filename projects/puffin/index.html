@@ -22,6 +22,7 @@
   </nav>
   <main class="main">
     <header class="page-header">
+      <img src="../../assets/images/puffin/logo.png" alt="Puffin logo" style="width:64px;height:64px;border-radius:16px;margin-bottom:1rem;">
       <p class="page-eyebrow">Case Study · Class Project</p>
       <h1 class="page-title">Puffin</h1>
       <p class="page-lede">Making drone simulation workflows more approachable through a browser-based control panel. A CS160 team project consolidating PX4, Gazebo, and ROS 2 setup, monitoring, and control into one dashboard.</p>
@@ -122,6 +123,10 @@
           <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Package upload and process information, closer to existing robotics tools.</p>
         </div>
       </div>
+      <figure class="figure">
+        <img src="../../assets/images/puffin/paper-prototypes.jpg" alt="Paper prototype sketches for Puffin, showing a dashboard-first launcher and status screens alongside a terminal-forward workflow with command console and package upload">
+        <figcaption>Dashboard- and terminal-oriented paper prototypes explored different levels of abstraction.</figcaption>
+      </figure>
       <div class="card" style="margin-bottom:3.5rem;">
         <dl class="case-study" style="border:none;padding:0;margin:0;">
           <dt>Testing with three participant types</dt>
@@ -147,10 +152,24 @@
           <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">A modular, light dashboard with familiar sidebar navigation — the most approachable structure, though labels needed explanation and color carried too much status meaning.</p>
         </div>
       </div>
+      <figure class="figure">
+        <img src="../../assets/images/puffin/hifi-concepts.jpg" alt="Three high-fidelity design concepts for Puffin: a dense monitoring layout, an explicit-controls layout, and the modular sidebar-navigation layout that became the foundation">
+        <figcaption>High-fidelity concepts explored dense monitoring, explicit simulation controls, and modular navigation.</figcaption>
+      </figure>
       <p style="color:var(--espresso-soft);font-size:0.9rem;line-height:1.65;margin-bottom:3.5rem;max-width:760px;">We selected Design 3 as the foundation, then folded in Design 2's explicit controls and Design 1's technical detail. External critique reinforced this: one participant valued the ROS 2 graph for making node/topic relationships visible, the other valued a single place to check service health — both cases where users wanted Puffin to explain how the system's parts relate.</p>
 
       <p class="section-label" id="build">Final Design & Build</p>
       <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.65;margin-bottom:1.5rem;max-width:760px;">Puffin runs in three stages: enter through the launcher and check whether required processes are active (Start/Stop/Reset); monitor the drone through the viewport, telemetry, process state, flight mode, and arming state, with Arm/Takeoff/Land/Disarm controls and physical-controller support; and, if something goes wrong, inspect implicated processes without leaving the app. The Dashboard, ROS2 Services, ROS2 Graph, and a WebSocket-connected floating terminal cover simulation state, lifecycle control, node/topic visualization, and lower-level access respectively. The implemented offboard demo flies a 10m square via a ROS 2 lifecycle node through PX4 offboard setpoints.</p>
+      <div class="figure-row">
+        <figure class="figure">
+          <img src="../../assets/images/puffin/dashboard.jpg" alt="The final Puffin dashboard showing the Gazebo simulation viewport, PX4 flight telemetry, control panel, service health, and simulation process list">
+          <figcaption>The final dashboard combines visualization, telemetry, process state, and vehicle controls.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="../../assets/images/puffin/ros-graph.jpg" alt="The Puffin ROS2 Graph screen visualizing active nodes, topics, and publish/subscribe connections">
+          <figcaption>ROS screens preserve technical depth through visualized node relationships.</figcaption>
+        </figure>
+      </div>
       <div class="stat-row" style="margin-bottom:1.5rem;">
         <div class="stat-tile"><div class="stat-number">29+</div><div class="stat-label">Automated backend tests</div></div>
         <div class="stat-tile"><div class="stat-number">3</div><div class="stat-label">Primary user workflows verified</div></div>
@@ -167,6 +186,17 @@
         <div class="stat-tile"><div class="stat-number">216.8s</div><div class="stat-label">Avg. successful takeoff time</div></div>
         <div class="stat-tile"><div class="stat-number">1.8</div><div class="stat-label">Avg. facilitator interventions</div></div>
         <div class="stat-tile"><div class="stat-number">4.0</div><div class="stat-label">Avg. critical features flagged missing</div></div>
+      </div>
+
+      <div class="figure-row">
+        <figure class="figure">
+          <img src="../../assets/images/puffin/interventions-chart.png" alt="Bar chart of interviewer interventions and critical missing features reported by each of the five usability test participants">
+          <figcaption>Interviewer interventions and critical missing features by participant. User 1 did not complete takeoff.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="../../assets/images/puffin/likert-chart.png" alt="Diverging stacked bar chart of five-point Likert responses across nine usability statements, from strongly disagree to strongly agree">
+          <figcaption>Responses across the nine five-point Likert items.</figcaption>
+        </figure>
       </div>
 
       <div class="timeline" style="margin-bottom:3.5rem;">
