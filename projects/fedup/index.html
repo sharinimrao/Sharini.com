@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharini.com — Fed Up Case Study</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-inner">
+      <div class="wordmark">Sharini.com</div>
+      <div class="citrus-spin"></div>
+      <ul class="nav-links">
+        <li><a href="../../index.html"><span class="nav-icon icon icon-flower"></span><span class="nav-label">About</span></a></li>
+        <li><a href="../index.html" class="active"><span class="nav-icon icon icon-tools"></span><span class="nav-label">Work</span></a></li>
+        <li><a href="../../resume.pdf" target="_blank"><span class="nav-icon icon icon-doc"></span><span class="nav-label">Resume</span></a></li>
+      </ul>
+      <div class="sidebar-footer">© 2026 Sharini</div>
+    </div>
+  </nav>
+  <main class="main">
+    <header class="page-header">
+      <p class="page-eyebrow">Case Study · Personal Project</p>
+      <h1 class="page-title">Fed Up</h1>
+      <p class="page-lede">Real-time group dining decisions, curated from your friends' actual taste.</p>
+      <div class="info-row" style="margin-top:1.5rem;">
+        <a href="https://forknife-it.vercel.app" target="_blank" class="social-link"><span class="social-icon icon icon-tools"></span>Live app</a>
+        <a href="https://github.com/sharinimrao/Foogle" target="_blank" class="social-link"><span class="social-icon icon icon-github"></span>Repository</a>
+      </div>
+    </header>
+
+    <section class="content-section">
+
+      <p style="color:var(--espresso-soft);font-size:0.85rem;margin-bottom:2.5rem;">Role: Solo designer & developer · Timeline: Ongoing personal project · Tools: Figma, Next.js, Postgres, Redis, Google Places API, Claude API, Pusher</p>
+
+      <nav class="subnav">
+        <a href="#problem">Problem</a>
+        <a href="#landscape">Landscape</a>
+        <a href="#naming">Naming</a>
+        <a href="#identity">Visual Identity</a>
+        <a href="#screens">Key Screens</a>
+        <a href="#build">Build</a>
+        <a href="#reflection">Reflection</a>
+      </nav>
+
+      <p class="section-label" id="problem">The Problem</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:3rem;max-width:760px;">"Where should we eat?" is a question every friend group asks constantly — and answers badly. Existing tools either force a rigid swipe-to-match mechanic, or rely on generic star ratings that don't reflect what <em>your</em> specific friends actually like. I wanted to explore whether a dining-decision app could go a step further: what if recommendations were sourced from the people whose taste you actually trust, not anonymous internet reviewers?</p>
+
+      <p class="section-label" id="landscape">Competitive Landscape</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;max-width:760px;">Before designing anything, I researched the existing space and found it more crowded than expected — MunchMatch, GroupEats, and Tonight's Bite all use nearly identical "Tinder for restaurants" pitches: swipe, match, done. This was a useful finding, not a discouraging one. It told me the underlying problem is real and validated — but it also meant a straight swipe-and-match clone wouldn't be differentiated. I needed a genuine point of view, not just another version of the same idea.</p>
+      <div class="grid" style="margin-bottom:3.5rem;">
+        <div class="card">
+          <h3 class="card-title">Friend-Sourced</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Surface restaurants your actual friends have saved, not raw Google ratings from anonymous reviewers.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">"Been There" Exclusion</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Don't keep suggesting places you've already discovered — the list actively narrows as you explore.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">No Mandatory Swiping</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">A lighter, faster decision flow for people who just want an answer, not a game to play first.</p>
+        </div>
+      </div>
+
+      <p class="section-label" id="naming">Naming</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:3.5rem;max-width:760px;">The name went through more iterations than I expected. Early options (Munchmatch, GroupEats-adjacent names, Plate Date) turned out to already be in use by real, live competitors — a good reminder to check for collisions <em>before</em> getting attached to a direction, not after. I landed on <strong>Fed Up</strong> — short, a little cheeky (tired of not knowing where to eat), and open enough to support a genuinely playful visual identity.</p>
+
+      <p class="section-label" id="identity">Visual Identity</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;max-width:760px;"><strong>Logo:</strong> the wordmark's "d" is reimagined as an illustrated plate of pasta — noodles rising from the plate into a fork, standing in for the ascender. This went through several iterations: an early version used flat vector noodles that read as a solid block rather than individual strands; I ultimately hand-illustrated the noodles in Procreate to get real texture, then imported them into Figma as a transparent asset.</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;max-width:760px;"><strong>Color palette:</strong> I iterated through several directions (a brighter "pop art" palette, several muted options) before settling on a Tomato &amp; Basil palette — colors pulled directly from actual pasta ingredients, which ties the brand's visual system back to the logo's own core joke rather than feeling like an arbitrary color choice layered on top.</p>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E63946;"></div>
+          <div class="swatch-label"><span class="swatch-name">Tomato Red</span><span class="swatch-hex">#E63946 · primary, CTAs</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#2A9D8F;"></div>
+          <div class="swatch-label"><span class="swatch-name">Basil Green</span><span class="swatch-hex">#2A9D8F · secondary, calm states</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F4A261;"></div>
+          <div class="swatch-label"><span class="swatch-name">Warm Orange</span><span class="swatch-hex">#F4A261 · accent</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#FEFAE0;"></div>
+          <div class="swatch-label"><span class="swatch-name">Cream</span><span class="swatch-hex">#FEFAE0 · background</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#264653;"></div>
+          <div class="swatch-label"><span class="swatch-name">Deep Teal</span><span class="swatch-hex">#264653 · text & outlines</span></div>
+        </div>
+      </div>
+
+      <p class="section-label" id="screens">Key Screens</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <h3 class="card-title">Filter Screen</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Supports both quick, low-commitment cravings ("Just Drinks," "Coffee Run") and deeper filtering (cuisine, dietary restrictions, price, distance) — serving both "I need an answer in 10 seconds" and "let's actually plan tonight" moments.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Menu Cards</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">The core recommendation surface, styled deliberately like an actual restaurant menu (dashed dividers, a printed-card aesthetic). Each card explicitly shows <em>whose</em> list a recommendation is sourced from ("via Maya's List"), making the friend-sourced differentiator visible in the product itself.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Group Pick</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Generates a shareable room code so a group can vote together in real time, with results converging on a single "It's a Match!" screen.</p>
+        </div>
+      </div>
+      <figure class="figure" style="margin-bottom:3.5rem;">
+        <img src="../../assets/images/fedup/figma-board.jpg" alt="Figma board showing the full Fed Up design system: log-in page, filter and menu pick screens, menu cards, group pick flow, saved restaurants, profile, friends, wish list, and icon set">
+        <figcaption>The full Fed Up design system in Figma — log-in, filtering, menu cards, group voting, and saved-restaurant flows.</figcaption>
+      </figure>
+
+      <p class="section-label" id="build">From Design to Working Product</p>
+      <p style="color:var(--espresso-soft);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;max-width:760px;">Unlike a typical portfolio project, I took Fed Up all the way to a real, deployed product with actual backend infrastructure:</p>
+      <div class="grid" style="margin-bottom:1.5rem;">
+        <div class="card">
+          <h3 class="card-title">Real Authentication</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Google OAuth and email/password, both fully functional.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Persistent Data</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Postgres for user accounts, dietary preferences, Been There / Wish List entries, and friend relationships.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Real-Time Sync</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Redis-backed room state and Pusher for live group voting sync.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Recommendation Engine</h3>
+          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.6;">Google Places API + Claude API, weighted toward friends' saved restaurants and excluding places already marked "Been There."</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:3.5rem;">
+        <dl class="case-study" style="border:none;padding:0;margin:0;">
+          <dt>Real engineering problems</dt>
+          <dd>This stage surfaced issues pure design work doesn't: debugging why a location field silently failed to update recommendations (stale cached coordinates from a "Use My Location" click), fixing OAuth redirect URI mismatches, and working through cloud infrastructure permissioning issues to get the database properly connected.</dd>
+        </dl>
+      </div>
+
+      <p class="section-label" id="reflection">Reflection</p>
+      <div class="stripe-block" style="margin-bottom:2.5rem;">
+        <p style="font-size:0.95rem;line-height:1.65;">Building Fed Up end-to-end — from competitive research and naming through visual design and into a real deployed backend — was a different kind of project than a typical Figma-only case study. It forced design decisions to hold up under actual technical constraints, and it surfaced how much of "the design is done" work still remains once real data, real auth, and real edge cases enter the picture.</p>
+      </div>
+
+      <div style="margin-top:1rem;">
+        <a href="../index.html" class="btn">← Back to Work</a>
+      </div>
+
+    </section>
+  </main>
+</div>
+</body>
+</html>
