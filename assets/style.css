@@ -570,30 +570,6 @@ a { color: inherit; text-decoration: none; }
 .social-link:hover { border-color: var(--honey); color: var(--honey-deep); transform: translateY(-2px); }
 .social-icon { width: 16px; height: 16px; }
 
-/* ===== HEX TECH STACK (About) ===== */
-.hex-grid { display: flex; flex-wrap: wrap; gap: 1.75rem 1.5rem; margin-bottom: 3.5rem; }
-.hex-cell {
-  width: 170px; height: 196px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background: var(--white);
-  border: 2px solid rgba(45,42,38,0.08);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 0.6rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-}
-.hex-cell:nth-child(even) { margin-top: 30px; }
-.hex-cell:hover, .hex-cell:focus-within {
-  border-color: var(--amber-glow);
-  box-shadow: 0 0 0 3px rgba(245,158,11,0.18), 0 0 26px rgba(245,158,11,0.4);
-}
-.hex-icon { width: 30px; height: 30px; color: var(--honey-deep); }
-.hex-label {
-  font-family: var(--brush); font-style: italic; font-weight: 600;
-  font-size: 1rem; color: var(--espresso); text-align: center; padding: 0 0.5rem;
-}
-@media (max-width: 860px) { .hex-grid { justify-content: center; } }
-
 /* ===== PURSUIT ICONS (About — Outside the work) ===== */
 .pursuit-icon { width: 28px; height: 28px; color: var(--honey-deep); margin-bottom: 0.6rem; }
 

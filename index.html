@@ -57,7 +57,6 @@
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills & Tools</a>
-        <a href="#stack">Tech Stack</a>
         <a href="#outside">Outside the work</a>
       </nav>
 
@@ -173,7 +172,7 @@
         <span class="tag tag-dark">TypeScript</span>
         <span class="tag tag-dark">JavaScript</span>
         <span class="tag tag-dark">Python</span>
-        <span class="tag tag-dark">SQL</span>
+        <span class="tag tag-dark">SQL (Postgres/MySQL)</span>
         <span class="tag tag-dark">Java</span>
         <span class="tag tag-dark">HTML/CSS</span>
         <span class="tag tag-dark">MATLAB</span>
@@ -190,19 +189,12 @@
         <span class="tag tag-pop">Node.js</span>
         <span class="tag tag-pop">Postgres</span>
         <span class="tag tag-pop">Redis</span>
+        <span class="tag">Pusher</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">JSON APIs</span>
         <span class="tag">Figma</span>
         <span class="tag">Git</span>
         <span class="tag">Vercel</span>
-      </div>
-
-      <p class="section-label" id="stack">Tech Stack</p>
-      <div class="hex-grid">
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">Next.js</span></div>
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">Redis</span></div>
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">TypeScript</span></div>
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">Node.js</span></div>
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">Postgres</span></div>
-        <div class="hex-cell" tabindex="0"><span class="hex-icon icon icon-code"></span><span class="hex-label">RAG Pipelines</span></div>
       </div>
 
       <p class="section-label" id="outside">Outside the work</p>
@@ -227,32 +219,7 @@
     </section>
   </main>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 <script src="assets/js/scroll-spine.js"></script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const hexCells = gsap.utils.toArray('.hex-cell');
-
-  if (hexCells.length && !reduceMotion) {
-    gsap.set(hexCells, { opacity: 0, scale: 0.4, y: -40 });
-    gsap.to(hexCells, {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      duration: 0.7,
-      stagger: 0.12,
-      ease: 'back.out(1.5)',
-      scrollTrigger: {
-        trigger: '.hex-grid',
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      }
-    });
-  }
-</script>
 </body>
 </html>
