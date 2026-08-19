@@ -24,6 +24,10 @@
     transition:all 0.18s ease;
   }
   .social-link:hover { border-color:var(--coral); transform:translateX(4px); color:var(--coral); }
+  .contact-grid { display:grid; grid-template-columns:1.2fr 0.8fr; gap:3rem; max-width:800px; align-items:start; }
+  @media (max-width: 680px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
 </style>
 </head>
 <body>
@@ -47,7 +51,7 @@
       <p class="page-lede">Whether it's a collab, an opportunity, or just a hello — I read everything and reply to most things.</p>
     </header>
     <section class="content-section">
-      <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;max-width:800px;align-items:start;">
+      <div class="contact-grid">
 
         <div>
           <p class="section-label">Send a note</p>
