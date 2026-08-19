@@ -29,7 +29,7 @@
       <p class="section-label">Featured</p>
       <div class="grid">
 
-        <div class="card" id="legali-ai">
+        <div class="card card--glow" id="legali-ai">
   <span class="tag tag-dark">Production Work</span>
   <h3 class="card-title">Legali AI</h3>
   <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Software Engineering Intern — Production Pages</p>
@@ -40,7 +40,7 @@
   <a href="https://lea.legali.ai/" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
 </div>
 
-        <div class="card" id="nutripath">
+        <div class="card card--glow" id="nutripath">
   <span class="tag tag-pop">Hackathon</span>
   <h3 class="card-title">NutriPath</h3>
   <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">RAG-Grounded Medical Meal Planning Assistant</p>
@@ -51,7 +51,7 @@
   <a href="https://github.com/sharinimrao/NutriPath" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
 </div>
 
-        <div class="card" id="fedup">
+        <div class="card card--glow" id="fedup">
   <span class="tag">Personal Project</span>
   <h3 class="card-title">FedUp</h3>
   <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Real-Time Group Dining Decision App</p>
@@ -63,7 +63,7 @@
   <a href="fedup/index.html" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">Case study →</a>
 </div>
 
-        <div class="card">
+        <div class="card card--glow">
   <span class="tag tag-blush">Class Project</span>
   <h3 class="card-title">Puffin</h3>
   <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Browser-Based Drone Simulation Dashboard</p>
@@ -75,7 +75,7 @@
   <a href="puffin/index.html" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">Case study →</a>
 </div>
 
-        <div class="card">
+        <div class="card card--glow">
   <span class="tag">Personal Project</span>
   <h3 class="card-title">My Recipes</h3>
   <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Personal Recipe Blog</p>
@@ -87,7 +87,7 @@
   <a href="https://my-recipes-dun.vercel.app" target="_blank" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">View Live →</a>
 </div>
 
-        <div class="card">
+        <div class="card card--glow">
           <span class="tag tag-pop">Hackathon</span>
           <h3 class="card-title">Eye Disease Classifier</h3>
           <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">C Light Technologies · Eye Disease Classification Model</p>
@@ -106,5 +106,44 @@
     </section>
   </main>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const glowCards = gsap.utils.toArray('.grid .card--glow');
+
+  gsap.set(glowCards, { opacity: 0, y: 28 });
+  glowCards.forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power2.out',
+      delay: (i % 3) * 0.08,
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 88%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+  const glowOn = { boxShadow: '0 10px 32px rgba(244,163,0,0.32)', borderColor: 'rgba(244,163,0,0.55)' };
+  const glowOff = { boxShadow: '0 2px 16px rgba(45,42,38,0.06)', borderColor: 'rgba(45,42,38,0.08)' };
+
+  glowCards.forEach(card => {
+    let glowAnim;
+    card.addEventListener('mouseenter', () => {
+      if (glowAnim) glowAnim.pause();
+      glowAnim = anime({ targets: card, ...glowOn, duration: 420, easing: 'easeOutQuad' });
+    });
+    card.addEventListener('mouseleave', () => {
+      if (glowAnim) glowAnim.pause();
+      glowAnim = anime({ targets: card, ...glowOff, duration: 420, easing: 'easeOutQuad' });
+    });
+  });
+</script>
 </body>
 </html>
