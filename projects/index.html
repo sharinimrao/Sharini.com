@@ -3,179 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharini.com — Work</title>
-<link rel="stylesheet" href="../assets/style.css">
+<title>Sharini Rao — Work</title>
+<meta name="description" content="Projects by Sharini Rao — RAG pipelines, real-time infrastructure, and applied ML.">
+<link rel="stylesheet" href="../assets/redesign.css">
 </head>
 <body>
-<div class="shell">
-  <nav class="sidebar">
-    <div class="sidebar-inner">
-      <div class="wordmark">Sharini.com</div>
-      <div class="citrus-spin"></div>
-      <ul class="nav-links">
-        <li><a href="../index.html"><span class="nav-icon icon icon-flower"></span><span class="nav-label">About</span></a></li>
-        <li><a href="index.html" class="active"><span class="nav-icon icon icon-tools"></span><span class="nav-label">Work</span></a></li>
-        <li><a href="../resume.pdf" target="_blank"><span class="nav-icon icon icon-doc"></span><span class="nav-label">Resume</span></a></li>
-      </ul>
-    </div>
-  </nav>
-  <main class="main">
-    <header class="page-header">
-      <p class="page-eyebrow">Things I've built</p>
-      <h1 class="page-title">Work</h1>
-      <p class="page-lede">Fullstack development, AI and API integration, and product design/dev — a mix of personal builds, research tools, and deployed products.</p>
-    </header>
-    <section class="content-section">
-      <svg class="section-spine" viewBox="0 0 60 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path d="M28 0 C 50 100, 6 200, 28 300 C 50 400, 6 500, 28 600 C 50 700, 6 800, 28 900 C 40 950, 20 980, 28 1000" />
-      </svg>
-      <p class="section-label">Featured</p>
-      <div class="grid">
 
-        <div class="card card--glow" id="legali-ai">
-  <span class="tag tag-dark">Production Work</span>
-  <h3 class="card-title">Legali AI</h3>
-  <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Software Engineering Intern — Production Pages</p>
-  <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">Shipped <span class="countup">7</span> production pages for Legali's AI-powered legal-tech platform — including features, contributors, quiz, and the main site — using Next.js, React, and Figma-to-code workflows, with a 12-question interactive quiz featuring multi-step state management and WCAG-compliant accessibility across 7 supported languages.</p>
-  <div style="margin-bottom:0.75rem;">
-    <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">WCAG Accessibility</span>
+<header class="topbar">
+  <div class="topbar-inner">
+    <ul class="nav-links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
   </div>
-  <a href="https://lea.legali.ai/" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
-</div>
+</header>
 
-        <div class="card card--glow" id="nutripath">
-  <span class="tag tag-pop">Hackathon</span>
-  <h3 class="card-title">NutriPath</h3>
-  <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">RAG-Grounded Medical Meal Planning Assistant</p>
-  <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">Built a retrieval-augmented generation pipeline over 31 cited clinical dietary rules across 6 chronic conditions, using sentence-transformer embeddings and cosine-similarity search backed by Redis. Encoded condition-specific safety logic (CKD lab/stage-gating, IBS safeguards) to prevent unsafe recommendations — achieved <span class="countup">72%</span> top-1 / <span class="countup">90%</span> top-3 retrieval accuracy across a 29-case evaluation harness.</p>
-  <div style="margin-bottom:0.75rem;">
-    <span class="tag">RAG</span><span class="tag">Redis</span><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Sentence-Transformers</span>
-  </div>
-  <a href="https://github.com/sharinimrao/NutriPath" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
-</div>
+<main>
 
-        <div class="card card--glow" id="fedup">
-  <span class="tag">Personal Project</span>
-  <h3 class="card-title">FedUp</h3>
-  <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Real-Time Group Dining Decision App</p>
-  <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">A real-time group dining decision app solving restaurant selection two ways — AI-curated solo recommendations and live multiplayer voting rooms with instant match detection. Architected as a serverless full-stack app on Vercel using the Google Places API for search and the Claude API to curate personalized picks. Real-time multiplayer sync via Pusher (with automatic polling fallback) and Vercel KV for room state.</p>
-  <div style="margin-bottom:0.75rem;">
-    <span class="tag">Claude API</span><span class="tag">Google Places API</span><span class="tag">Pusher</span><span class="tag">Vercel KV</span><span class="tag">Serverless</span>
-  </div>
-  <a href="https://forknife-it.vercel.app" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
-  <a href="fedup/index.html" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">Case study →</a>
-</div>
+  <header class="page-header">
+    <p class="page-eyebrow">Things I've built</p>
+    <h1 class="page-title">Work</h1>
+    <p class="page-lede">A mix of production work, personal builds, and research tools — full detail and source lives on GitHub.</p>
+  </header>
 
-        <div class="card card--glow">
-  <span class="tag tag-blush">Class Project</span>
-  <h3 class="card-title">Puffin</h3>
-  <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Browser-Based Drone Simulation Dashboard</p>
-  <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">A browser-based control panel consolidating PX4/Gazebo drone simulation controls, live telemetry, ROS data, and the simulation view into one dashboard — replacing a fragmented workflow spread across Docker, multiple repositories, and command-line tools. Grounded in <span class="countup">4</span> needfinding interviews with drone club members and pilots, then validated through <span class="countup">5</span> moderated think-aloud usability sessions.</p>
-  <div style="margin-bottom:0.75rem;">
-    <span class="tag">Needfinding</span><span class="tag">Usability Testing</span><span class="tag">Dashboard Design</span><span class="tag">ROS</span>
-  </div>
-  <a href="https://puffin-railway-production.up.railway.app/dashboard" target="_blank" class="text-link" style="font-size:0.88rem;">View Live →</a>
-  <a href="puffin/index.html" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">Case study →</a>
-</div>
+  <section class="section" style="border-top:none;">
+    <p class="section-label">Featured</p>
+    <div class="projects-list">
 
-        <div class="card card--glow">
-  <span class="tag">Personal Project</span>
-  <h3 class="card-title">My Recipes</h3>
-  <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">Personal Recipe Blog</p>
-  <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">A personal recipe blog built with Next.js, TypeScript, and Tailwind CSS — sharing recipes alongside the stories behind them, with category-filtered browsing and individual recipe pages.</p>
-  <div style="margin-bottom:0.75rem;">
-    <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Vercel</span>
-  </div>
-  <a href="https://github.com/sharinimrao/my-recipes" target="_blank" class="text-link" style="font-size:0.88rem;">View on GitHub →</a>
-  <a href="https://my-recipes-dun.vercel.app" target="_blank" class="text-link" style="font-size:0.88rem;margin-left:0.75rem;">View Live →</a>
-</div>
-
-        <div class="card card--glow">
-          <span class="tag tag-pop">Hackathon</span>
-          <h3 class="card-title">Eye Disease Classifier</h3>
-          <p style="color:var(--espresso-soft);font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">C Light Technologies · Eye Disease Classification Model</p>
-          <p style="color:var(--espresso-soft);font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;">Built end-to-end Python pipelines to parse high-frequency eye-tracking data; engineered <span class="countup">16</span> features and trained a decision tree classifier achieving ~<span class="countup">70%</span> accuracy in identifying eye disease patterns. Presented model findings and business implications to C Light Technologies stakeholders.</p>
-          <div style="margin-bottom:0.75rem;">
-            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Feature Engineering</span><span class="tag">Decision Tree</span>
+      <article class="project-card">
+        <a class="project-thumb" href="https://github.com/sharinimrao/NutriPath" target="_blank" rel="noopener">
+          <div class="thumb-placeholder">NutriPath<br>screenshot coming soon</div>
+        </a>
+        <div class="project-head">
+          <div class="project-title-group">
+            <h3 class="project-title">NutriPath</h3>
+            <span class="tag">Hackathon</span>
           </div>
-          <a href="../assets/docs/eye-disease-classifier-presentation.pdf" target="_blank" class="text-link" style="font-size:0.88rem;">View Presentation →</a>
         </div>
+        <p class="project-sub">RAG-grounded medical meal-planning assistant</p>
 
+        <dl class="project-meta">
+          <div class="meta-item">
+            <dt>Problem</dt>
+            <dd>Clinical dietary-rule retrieval needed to be fast and safe across 6 chronic conditions.</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Approach</dt>
+            <dd>Sentence-transformer embeddings, cosine-similarity vector search in Redis, plus condition-specific safety gating (CKD lab/stage, IBS safeguards).</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Result</dt>
+            <dd>72% top-1 / 90% top-3 retrieval accuracy across a 29-case eval harness spanning 31 cited clinical rules.</dd>
+          </div>
+        </dl>
+
+        <div class="project-links">
+          <a href="https://github.com/sharinimrao/NutriPath" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.8-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="project-thumb" href="fedup/index.html">
+          <img src="../assets/images/fedup/figma-board.jpg" alt="Fed Up Figma design system board">
+        </a>
+        <div class="project-head">
+          <div class="project-title-group">
+            <h3 class="project-title">Fed Up</h3>
+            <span class="tag tag-clay">Personal Project</span>
+          </div>
+        </div>
+        <p class="project-sub">Real-time group dining decision platform</p>
+
+        <dl class="project-meta">
+          <div class="meta-item">
+            <dt>Problem</dt>
+            <dd>Group restaurant decisions stall waiting on everyone's input.</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Approach</dt>
+            <dd>Full-stack real-time platform: PostgreSQL for persistence, Redis for caching, Pusher for concurrent multi-user sync, and a live preference-scoring algorithm.</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Result</dt>
+            <dd>Live multiplayer voting rooms with instant match detection, alongside AI-curated solo recommendations.</dd>
+          </div>
+        </dl>
+
+        <div class="project-links">
+          <a href="fedup/index.html">Case study →</a>
+          <a href="https://forknife-it.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+          <a href="https://github.com/sharinimrao/FedUp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.8-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="project-thumb" href="puffin/index.html">
+          <img src="../assets/images/puffin/dashboard.jpg" alt="Puffin drone simulation dashboard">
+        </a>
+        <div class="project-head">
+          <div class="project-title-group">
+            <h3 class="project-title">Puffin</h3>
+            <span class="tag">Class Project</span>
+          </div>
+        </div>
+        <p class="project-sub">Browser-based drone simulation dashboard</p>
+
+        <dl class="project-meta">
+          <div class="meta-item">
+            <dt>Problem</dt>
+            <dd>Running a drone simulation meant fragmented setup across PX4, Gazebo, ROS 2, Docker, and the command line.</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Approach</dt>
+            <dd>One browser-based dashboard for simulation controls, live telemetry, and ROS data — grounded in 4 needfinding interviews, validated through 5 usability sessions.</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Result</dt>
+            <dd>4 of 5 usability participants completed takeoff; 29+ automated backend tests across the primary workflows.</dd>
+          </div>
+        </dl>
+
+        <div class="project-links">
+          <a href="puffin/index.html">Case study →</a>
+          <a href="https://puffin-railway-production.up.railway.app/dashboard" target="_blank" rel="noopener">Live ↗</a>
+          <a href="https://github.com/tim-nguyen0/puffin/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.8-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">More builds</p>
+    <div class="grid">
+
+      <div class="card">
+        <a class="card-thumb" href="https://lea.legali.ai/" target="_blank" rel="noopener">
+          <img src="../assets/images/legali-main.jpg" alt="Legali AI main page">
+        </a>
+        <p class="card-sub">Software Engineering Intern · Production Pages</p>
+        <h3 class="card-title">Legali AI</h3>
+        <p class="card-desc">Shipped 7 production pages for Legali's AI-powered legal-tech platform using Next.js, React, and Node.js — including a 12-question interactive quiz with multi-step state management and WCAG-compliant accessibility across 7 languages.</p>
+        <div class="card-tags">
+          <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Node.js</span>
+        </div>
+        <div class="card-links">
+          <a href="https://lea.legali.ai/" target="_blank" rel="noopener">View Live ↗</a>
+        </div>
       </div>
 
-      <div style="margin-top:2.5rem;">
-        <a href="https://github.com/sharinimrao" target="_blank" class="btn">See all on GitHub →</a>
+      <div class="card">
+        <a class="card-thumb" href="https://my-recipes-dun.vercel.app" target="_blank" rel="noopener">
+          <img src="../assets/images/my-recipes-main.jpg" alt="My Recipes main page">
+        </a>
+        <p class="card-sub">Personal Project · Recipe Blog</p>
+        <h3 class="card-title">My Recipes</h3>
+        <p class="card-desc">A personal recipe blog built with Next.js, TypeScript, and Tailwind CSS — category-filtered browsing and individual recipe pages, alongside the stories behind them.</p>
+        <div class="card-tags">
+          <span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sharinimrao/my-recipes" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://my-recipes-dun.vercel.app" target="_blank" rel="noopener">View Live ↗</a>
+        </div>
       </div>
-    </section>
-  </main>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-<script src="../assets/js/scroll-spine.js"></script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
 
-  const glowCards = gsap.utils.toArray('.grid .card--glow');
+      <div class="card">
+        <a class="card-thumb" href="../assets/docs/eye-disease-classifier-presentation.pdf" target="_blank" rel="noopener">
+          <div class="thumb-placeholder">Eye Disease Classifier<br>screenshot coming soon</div>
+        </a>
+        <p class="card-sub">Hackathon · C Light Technologies</p>
+        <h3 class="card-title">Eye Disease Classifier</h3>
+        <p class="card-desc">End-to-end Python pipelines to parse high-frequency eye-tracking data; engineered 16 features and trained a decision tree classifier reaching ~70% accuracy identifying eye disease patterns.</p>
+        <div class="card-tags">
+          <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">Feature Engineering</span>
+        </div>
+        <div class="card-links">
+          <a href="../assets/docs/eye-disease-classifier-presentation.pdf" target="_blank" rel="noopener">View Presentation ↗</a>
+        </div>
+      </div>
 
-  gsap.set(glowCards, { opacity: 0, y: 28 });
-  glowCards.forEach((card, i) => {
-    gsap.to(card, {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power2.out',
-      delay: (i % 3) * 0.08,
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 88%',
-        toggleActions: 'play none none none'
-      }
-    });
-  });
+    </div>
 
-  const glowOn = { boxShadow: '0 10px 32px rgba(244,163,0,0.32)', borderColor: 'rgba(244,163,0,0.55)' };
-  const glowOff = { boxShadow: '0 2px 16px rgba(45,42,38,0.06)', borderColor: 'rgba(45,42,38,0.08)' };
+    <div style="margin-top:2rem;">
+      <a href="https://github.com/sharinimrao" target="_blank" rel="noopener" class="btn btn-solid">See all on GitHub →</a>
+    </div>
+  </section>
 
-  glowCards.forEach(card => {
-    let glowAnim;
-    card.addEventListener('mouseenter', () => {
-      if (glowAnim) glowAnim.pause();
-      glowAnim = anime({ targets: card, ...glowOn, duration: 420, easing: 'easeOutQuad' });
-    });
-    card.addEventListener('mouseleave', () => {
-      if (glowAnim) glowAnim.pause();
-      glowAnim = anime({ targets: card, ...glowOff, duration: 420, easing: 'easeOutQuad' });
-    });
-  });
+</main>
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+<footer>
+  <div class="footer-inner">
+    <p class="footer-note">© 2026 Sharini Rao</p>
+    <div class="icon-links">
+      <a href="mailto:sharinimrao@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.2 12 13l9-6.8"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/sharinirao" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="7.2" cy="8" r="1.3" fill="currentColor" stroke="none"/><path d="M7.2 11v7M12 18v-4.5c0-1.7 1-2.5 2.3-2.5s2.2.8 2.2 2.5V18M12 11v7"/></svg>
+      </a>
+      <a href="https://github.com/sharinimrao" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.8-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
 
-  document.querySelectorAll('.countup').forEach(el => {
-    const match = el.textContent.trim().match(/^([\d.]+)(.*)$/);
-    if (!match) return;
-    const target = parseFloat(match[1]);
-    const decimals = (match[1].split('.')[1] || '').length;
-    const suffix = match[2];
-
-    if (reduceMotion) return;
-
-    const counter = { val: 0 };
-    el.textContent = '0' + suffix;
-    gsap.to(counter, {
-      val: target,
-      duration: 1.4,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 90%',
-        toggleActions: 'play none none none'
-      },
-      onUpdate: () => {
-        el.textContent = counter.val.toFixed(decimals) + suffix;
-      }
-    });
-  });
-</script>
 </body>
 </html>
