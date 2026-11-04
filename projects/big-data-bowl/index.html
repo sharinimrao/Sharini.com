@@ -24,44 +24,66 @@
   <header class="page-header">
     <p class="page-eyebrow">Case Study · Personal Project</p>
     <h1 class="page-title">NFL Big Data Bowl 2027</h1>
-    <p class="page-lede">How wide receivers' Combine movement translates to getting open, by route type.</p>
+    <p class="page-lede">Do Combine drills actually predict which receivers get open? In progress for the 2027 competition.</p>
   </header>
 
   <section class="section" style="border-top:none;">
 
-    <div class="cs-section" id="problem">
-      <p class="section-label">The problem</p>
-      <p class="cs-meta">Who’s struggling and why</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="question">
+      <p class="section-label">The question</p>
+      <p class="cs-body">Do the movement skills receivers show at the NFL Combine translate to getting open in real games, and do they tell teams more than the drill times already do?</p>
     </div>
 
-    <div class="cs-section" id="research">
-      <p class="section-label">Research</p>
-      <p class="cs-meta">How I learned about users</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="why">
+      <p class="section-label">Why it matters</p>
+      <p class="cs-body">Teams use Combine drills like the 3-cone and shuttle to evaluate a receiver’s agility, but those are just stopwatch times. They don’t show <em>how</em> a player cuts, and they don’t account for the defender. If tracking data can show which movement skills lead to getting open, teams can spot prospects whose drill times undersell or oversell them.</p>
     </div>
 
-    <div class="cs-section" id="key-decision">
-      <p class="section-label">Key decision</p>
-      <p class="cs-meta">What I chose and what I traded off</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="users">
+      <p class="section-label">Who it’s for</p>
+      <ul class="cs-list">
+        <li><strong>Scouts and evaluators:</strong> who’s better (or worse) than their drill times suggest</li>
+        <li><strong>Coaches:</strong> the specific weakness to work on with a player, like a slow stop vs. a slow restart</li>
+      </ul>
     </div>
 
-    <div class="cs-section" id="what-i-did">
-      <p class="section-label">What I did</p>
-      <p class="cs-meta">My specific role</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="approach">
+      <p class="section-label">My approach</p>
+      <div class="cs-finding">
+        <p class="cs-finding-title">1. Pick routes with one clear cut</p>
+        <p class="cs-finding-desc">Slant, out, curl/hitch and dig. Each has a single sharp change of direction, so the cut is easy to isolate. I left out go routes because the 40-yard dash already measures straight-line speed.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">2. Define “getting open”</p>
+        <p class="cs-finding-desc">Distance to the nearest defender at a set time after the cut and at the moment of the throw, adjusted for coverage type, alignment and defender where the data allows.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">3. Measure three things about each cut</p>
+        <ul class="cs-list">
+          <li><strong>Slowing down:</strong> how fast the receiver brakes into the cut</li>
+          <li><strong>Keeping speed:</strong> how much speed he carries out of the turn compared to going in</li>
+          <li><strong>Getting back up to speed:</strong> how quickly he returns to near top speed after the cut</li>
+        </ul>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">4. Test what drill times miss</p>
+        <p class="cs-finding-desc">Compare two models: one using only Combine drill times, and one that adds the tracking-based cut measurements. If the second predicts getting open better, by route, the movement data is telling teams something new.</p>
+      </div>
     </div>
 
-    <div class="cs-section" id="result">
-      <p class="section-label">Result</p>
-      <p class="cs-meta">Numbers or learnings</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="building">
+      <p class="section-label">What I’m building</p>
+      <p class="cs-body">A route-runner profile for each receiver: his cut measurements, how he ranks, and the routes where he’s projected to get open most.</p>
     </div>
 
     <div class="cs-section" id="next">
-      <p class="section-label">What I’d do next</p>
-      <p class="cs-body">[TBD]</p>
+      <p class="section-label">What’s next</p>
+      <p class="cs-body">Build the measurements, run the comparison, and design the profile in time for the competition deadline.</p>
+    </div>
+
+    <div class="cs-section" id="data">
+      <p class="section-label">Data</p>
+      <p class="cs-body">Player-tracking data from the <a href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2027" target="_blank" rel="noopener">NFL Big Data Bowl 2027 on Kaggle</a>.</p>
     </div>
 
     <a href="../index.html" class="btn">← Back to Work</a>
