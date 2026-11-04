@@ -11,6 +11,7 @@
 
 <header class="topbar">
   <div class="topbar-inner">
+    <a class="brand" href="../index.html">Sharini<br>Rao</a>
     <ul class="nav-links">
       <li><a href="../projects/index.html">Work</a></li>
       <li><a href="../index.html">About</a></li>
@@ -47,83 +48,138 @@
   <section class="section" id="kitchen">
     <h2 class="section-label">In the kitchen</h2>
     <p class="margins-intro">Food is how I take care of people. I care about who gets access to good food, how our food systems work, and teaching nutrition early, so cooking feels like something you get to do, not something you have to.</p>
-    <div class="margins-grid">
-      <a class="margin-card" href="https://my-recipes-dun.vercel.app" target="_blank" rel="noopener">
-        <img src="../assets/images/my-recipes-main.jpg" alt="Home page of Sharini's recipes site" loading="lazy">
-        <p class="margin-caption">Recipes I keep coming back to ↗</p>
+    <div class="album-grid">
+      <a class="album" href="https://my-recipes-dun.vercel.app" target="_blank" rel="noopener">
+        <span class="album-stack"><span class="album-tag">Site</span><img src="../assets/images/my-recipes-main.jpg" alt="Home page of Sharini's recipes site" loading="lazy"></span>
+        <span class="album-title">My recipes</span>
+        <span class="album-meta">The ones I keep coming back to ↗</span>
       </a>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/kids-cooking-for-life.jpg" alt="Kids at a cafeteria table eating dumplings they cooked, with hearts covering their faces" loading="lazy">
-        <figcaption class="margin-caption">Teaching with Kids Cooking for Life.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/friendsgiving-1.jpg" alt="Friendsgiving table with focaccia, pie, pinwheels, pretzel bites and a chopped salad" loading="lazy">
-        <figcaption class="margin-caption">Hosting Friendsgiving.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/friendsgiving-2.jpg" alt="Friendsgiving spread with mac and cheese, pinwheels, wraps and a bean salad" loading="lazy">
-        <figcaption class="margin-caption">Cooking for the people I love.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/pizza-night.jpg" alt="Homemade pizzas with prosciutto, pineapple and jalapeños on baking sheets" loading="lazy">
-        <figcaption class="margin-caption">Homemade pizza night.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/party-spread.jpg" alt="Party table with a fruit salad, chips, cheese and crackers, and brownies" loading="lazy">
-        <figcaption class="margin-caption">A spread for friends.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/cinnamon-rolls.jpg" alt="Pan of frosted cinnamon rolls with one on a plate" loading="lazy">
-        <figcaption class="margin-caption">Fresh cinnamon rolls.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/pasta-for-two.jpg" alt="Two plates of rigatoni in a creamy tomato sauce with garlic bread" loading="lazy">
-        <figcaption class="margin-caption">Pasta for two.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/sundae-bar.jpg" alt="Build-your-own sundae bar with ice cream, waffle bowls and toppings" loading="lazy">
-        <figcaption class="margin-caption">Build-your-own sundae bar.</figcaption>
-      </figure>
+      <button class="album" type="button" data-album="album-hosting" aria-haspopup="dialog">
+        <span class="album-stack"><span class="album-tag album-tag--pink">Friends</span><img src="../assets/images/margins/friendsgiving-1.jpg" alt="Friendsgiving table with focaccia, pie, pinwheels, pretzel bites and a chopped salad" loading="lazy"></span>
+        <span class="album-title">Hosting</span>
+        <span class="album-meta">7 photos · open →</span>
+      </button>
     </div>
+    <dialog class="album-dialog" id="album-hosting" aria-labelledby="album-hosting-title">
+      <div class="album-dialog-head">
+        <h3 class="album-dialog-title" id="album-hosting-title">Hosting</h3>
+        <button class="album-close" type="button" data-close>Close ×</button>
+      </div>
+      <div class="margins-grid">
+        <figure class="margin-card">
+          <img src="../assets/images/margins/friendsgiving-1.jpg" alt="Friendsgiving table with focaccia, pie, pinwheels, pretzel bites and a chopped salad" loading="lazy">
+          <figcaption class="margin-caption">Hosting Friendsgiving.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/friendsgiving-2.jpg" alt="Friendsgiving spread with mac and cheese, pinwheels, wraps and a bean salad" loading="lazy">
+          <figcaption class="margin-caption">Cooking for the people I love.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/pizza-night.jpg" alt="Homemade pizzas with prosciutto, pineapple and jalapeños on baking sheets" loading="lazy">
+          <figcaption class="margin-caption">Homemade pizza night.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/party-spread.jpg" alt="Party table with a fruit salad, chips, cheese and crackers, and brownies" loading="lazy">
+          <figcaption class="margin-caption">A spread for friends.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/cinnamon-rolls.jpg" alt="Pan of frosted cinnamon rolls with one on a plate" loading="lazy">
+          <figcaption class="margin-caption">Fresh cinnamon rolls.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/pasta-for-two.jpg" alt="Two plates of rigatoni in a creamy tomato sauce with garlic bread" loading="lazy">
+          <figcaption class="margin-caption">Pasta for two.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/sundae-bar.jpg" alt="Build-your-own sundae bar with ice cream, waffle bowls and toppings" loading="lazy">
+          <figcaption class="margin-caption">Build-your-own sundae bar.</figcaption>
+        </figure>
+      </div>
+    </dialog>
   </section>
 
-  <section class="section" id="giving-back">
-    <h2 class="section-label">Giving back</h2>
+  <section class="section" id="community">
+    <h2 class="section-label">Community service</h2>
     <p class="margins-intro">Teaching kids science and nutrition, hands-on.</p>
-    <div class="margins-grid">
-      <figure class="margin-card">
-        <img src="../assets/images/margins/day-of-science.jpg" alt="Group of Berkeley student volunteers in front of a Day of Science slide" loading="lazy">
-        <figcaption class="margin-caption">Day of Science!</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/water-works.jpg" alt="Five volunteers in a classroom in front of a Water Works water cycle lesson slide" loading="lazy">
-        <figcaption class="margin-caption">Teaching the water cycle.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/volunteer-selfie.jpg" alt="Sharini taking a selfie with a student, whose face is covered by a heart" loading="lazy">
-        <figcaption class="margin-caption">The best part: the kids.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/hands-on-science.jpg" alt="A volunteer helping kids with a moon phases activity, hearts covering the kids’ faces" loading="lazy">
-        <figcaption class="margin-caption">Hands-on science.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/building-together.jpg" alt="Many hands building a model landscape together in a plastic bin" loading="lazy">
-        <figcaption class="margin-caption">Building it together.</figcaption>
-      </figure>
-      <figure class="margin-card">
-        <img src="../assets/images/margins/prep-crew.jpg" alt="Volunteers sitting on the floor prepping lesson materials" loading="lazy">
-        <figcaption class="margin-caption">Prep crew.</figcaption>
-      </figure>
+    <div class="album-grid">
+      <button class="album" type="button" data-album="album-catalyst" aria-haspopup="dialog">
+        <span class="album-stack"><span class="album-tag">Science</span><img src="../assets/images/margins/day-of-science.jpg" alt="Group of Berkeley student volunteers in front of a Day of Science slide" loading="lazy"></span>
+        <span class="album-title">Community Catalyst x CRS</span>
+        <span class="album-meta">6 photos · open →</span>
+      </button>
+      <button class="album" type="button" data-album="album-kcfl" aria-haspopup="dialog">
+        <span class="album-stack"><span class="album-tag album-tag--pink">Nutrition</span><img src="../assets/images/margins/kids-cooking-for-life.jpg" alt="Kids at a cafeteria table eating dumplings they cooked, with hearts covering their faces" loading="lazy"></span>
+        <span class="album-title">Kids Cooking for Life</span>
+        <span class="album-meta">1 photo · open →</span>
+      </button>
     </div>
+    <dialog class="album-dialog" id="album-catalyst" aria-labelledby="album-catalyst-title">
+      <div class="album-dialog-head">
+        <h3 class="album-dialog-title" id="album-catalyst-title">Community Catalyst x CRS</h3>
+        <button class="album-close" type="button" data-close>Close ×</button>
+      </div>
+      <div class="margins-grid">
+        <figure class="margin-card">
+          <img src="../assets/images/margins/day-of-science.jpg" alt="Group of Berkeley student volunteers in front of a Day of Science slide" loading="lazy">
+          <figcaption class="margin-caption">Day of Science!</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/water-works.jpg" alt="Five volunteers in a classroom in front of a Water Works water cycle lesson slide" loading="lazy">
+          <figcaption class="margin-caption">Teaching the water cycle.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/volunteer-selfie.jpg" alt="Sharini taking a selfie with a student, whose face is covered by a heart" loading="lazy">
+          <figcaption class="margin-caption">The best part: the kids.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/hands-on-science.jpg" alt="A volunteer helping kids with a moon phases activity, hearts covering the kids’ faces" loading="lazy">
+          <figcaption class="margin-caption">Hands-on science.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/building-together.jpg" alt="Many hands building a model landscape together in a plastic bin" loading="lazy">
+          <figcaption class="margin-caption">Building it together.</figcaption>
+        </figure>
+        <figure class="margin-card">
+          <img src="../assets/images/margins/prep-crew.jpg" alt="Volunteers sitting on the floor prepping lesson materials" loading="lazy">
+          <figcaption class="margin-caption">Prep crew.</figcaption>
+        </figure>
+      </div>
+    </dialog>
+    <dialog class="album-dialog" id="album-kcfl" aria-labelledby="album-kcfl-title">
+      <div class="album-dialog-head">
+        <h3 class="album-dialog-title" id="album-kcfl-title">Kids Cooking for Life</h3>
+        <button class="album-close" type="button" data-close>Close ×</button>
+      </div>
+      <div class="margins-grid">
+        <figure class="margin-card">
+          <img src="../assets/images/margins/kids-cooking-for-life.jpg" alt="Kids at a cafeteria table eating dumplings they cooked, with hearts covering their faces" loading="lazy">
+          <figcaption class="margin-caption">Teaching with Kids Cooking for Life.</figcaption>
+        </figure>
+        <figure class="margin-card margin-card--empty">
+          <span class="empty-slot" aria-hidden="true"></span>
+                  </figure>
+        <figure class="margin-card margin-card--empty">
+          <span class="empty-slot" aria-hidden="true"></span>
+                  </figure>
+      </div>
+    </dialog>
   </section>
 
-  <section class="section" id="moving">
-    <h2 class="section-label">Moving</h2>
+  <section class="section" id="sports">
+    <h2 class="section-label">Sports</h2>
+    <p class="margins-intro">Running, tennis, golf, and any excuse to be on a trail.</p>
     <div class="margins-grid">
       <figure class="margin-card">
         <img src="../assets/images/photos/photo-14.jpg" alt="Crowd of runners at the start of a race surrounded by trees" loading="lazy">
         <figcaption class="margin-caption">Run club regular.</figcaption>
+      </figure>
+      <figure class="margin-card">
+        <img src="../assets/images/photos/photo-03.jpg" alt="Empty tennis court with a fall tree in the background" loading="lazy">
+        <figcaption class="margin-caption">Tennis, anytime.</figcaption>
+      </figure>
+      <figure class="margin-card">
+        <img src="../assets/images/photos/photo-04.jpg" alt="Two people walking across a golf course carrying golf bags at dusk" loading="lazy">
+        <figcaption class="margin-caption">Golf at dusk.</figcaption>
       </figure>
       <figure class="margin-card">
         <img src="../assets/images/photos/photo-06.jpg" alt="Two people walking down a hiking trail toward a sunset over the city" loading="lazy">
@@ -132,6 +188,51 @@
       <figure class="margin-card">
         <img src="../assets/images/photos/photo-11.jpg" alt="Large group photo on a rocky hilltop after a hike" loading="lazy">
         <figcaption class="margin-caption">Hikes with good people.</figcaption>
+      </figure>
+      <figure class="margin-card">
+        <img src="../assets/images/photos/photo-09.jpg" alt="Group hiking through coastal brush at dusk" loading="lazy">
+        <figcaption class="margin-caption">Golden hour on the trail.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="photography">
+    <h2 class="section-label">Photography</h2>
+    <p class="margins-intro">Places I stopped to look at.</p>
+    <div class="film-strip-wrap">
+      <div class="film-strip" tabindex="0" aria-label="Photography film strip, scrolls sideways">
+        <figure class="film-frame"><img src="../assets/images/photos/photo-01.jpg" alt="Friends sitting on a rock outcropping watching the sunset over the Bay Area" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-02.jpg" alt="View of the Golden Gate Bridge through trees from a coastal overlook" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-07.jpg" alt="View over Berkeley hills at sunrise with a large tree in the foreground" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-10.jpg" alt="Rocky coastal cliffs with waves crashing below" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-08.jpg" alt="People playing at the beach in the waves" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-13.jpg" alt="Palm trees framing a view of the beach and ocean" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-05.jpg" alt="Tennis courts seen through trees at sunset" loading="lazy"></figure>
+        <figure class="film-frame"><img src="../assets/images/photos/photo-12.jpg" alt="A dog in a backpack carrier inside an outdoor gear shop" loading="lazy"></figure>
+      </div>
+    </div>
+    <p class="film-hint">Scroll sideways →</p>
+  </section>
+
+  <section class="section" id="arts">
+    <h2 class="section-label">The arts</h2>
+    <p class="margins-intro">Drawing, painting, singing, and dancing: where it all started.</p>
+    <div class="margins-grid">
+      <figure class="margin-card margin-card--empty">
+        <span class="empty-slot" aria-hidden="true"></span>
+        <figcaption class="margin-caption">Drawings</figcaption>
+      </figure>
+      <figure class="margin-card margin-card--empty">
+        <span class="empty-slot" aria-hidden="true"></span>
+        <figcaption class="margin-caption">ExComm</figcaption>
+      </figure>
+      <figure class="margin-card margin-card--empty">
+        <span class="empty-slot" aria-hidden="true"></span>
+        <figcaption class="margin-caption">Singing</figcaption>
+      </figure>
+      <figure class="margin-card margin-card--empty">
+        <span class="empty-slot" aria-hidden="true"></span>
+        <figcaption class="margin-caption">Dancing</figcaption>
       </figure>
     </div>
   </section>
@@ -162,6 +263,18 @@
   </section>
 
 </main>
+
+<script>
+  // Album cards open their photo dialog; Close button or a click on the backdrop shuts it.
+  document.querySelectorAll('[data-album]').forEach(function (btn) {
+    var dlg = document.getElementById(btn.dataset.album);
+    btn.addEventListener('click', function () { dlg.showModal(); });
+  });
+  document.querySelectorAll('.album-dialog').forEach(function (dlg) {
+    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  });
+</script>
 
 <footer>
   <div class="footer-inner">
