@@ -22,46 +22,96 @@
 <main>
 
   <header class="page-header">
-    <p class="page-eyebrow">Case Study · Experience</p>
+    <p class="page-eyebrow">Case Study · Internship</p>
     <h1 class="page-title">Legali AI</h1>
-    <p class="page-lede">Production pages for an AI-powered legal-tech platform, including a 12-question interactive quiz accessible across 7 languages.</p>
+    <p class="page-lede">Building a trauma-informed product as a student engineer.</p>
   </header>
 
   <section class="section" style="border-top:none;">
 
+    <div class="cs-section" id="intro">
+      <p class="pull-quote"><strong>Every screen I built could be seen by someone in an unsafe situation.</strong> That changed how I thought about everything: copy, privacy and tone weren’t polish, they were the product.</p>
+      <p class="cs-body">As a part-time intern at Legali AI, I turned design mockups and product direction for Lea, a trauma-informed AI companion for survivors of abuse, into live, multilingual, accessible web pages.</p>
+    </div>
+
     <div class="cs-section" id="problem">
       <p class="section-label">The problem</p>
-      <p class="cs-meta">Who’s struggling and why</p>
-      <p class="cs-body">[TBD]</p>
+      <p class="cs-body">Lea supports people navigating abuse, leaving a difficult situation or rebuilding their lives. Many of its users are domestic-violence survivors on shared devices, in a hurry, or under stress.</p>
+      <p class="cs-body">That shaped three principles I designed around:</p>
+      <ol class="cs-list cs-list--steps">
+        <li><strong>Safety and privacy first.</strong> Nothing should expose a user by accident, including what a shared image or link reveals.</li>
+        <li><strong>Calm, not clinical.</strong> Warm colors, soft type and plain language, so a screen never feels like another form to survive.</li>
+        <li><strong>Reachable in the user’s own language.</strong> Support that only works in English leaves people out.</li>
+      </ol>
     </div>
 
-    <div class="cs-section" id="research">
-      <p class="section-label">Research</p>
-      <p class="cs-meta">How I learned about users</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="role">
+      <p class="section-label">My role and constraints</p>
+      <p class="cs-body">Part-time, remote software engineering intern, about 15 hours a week, across three codebases. I was the engineer closest to the work, and I made many of the small product calls the specs left open.</p>
+      <ul class="cs-list">
+        <li><strong>Short weekly windows:</strong> I picked work I could ship in small pieces.</li>
+        <li><strong>Remote and async:</strong> feedback came through review cycles, not hallway conversations.</li>
+        <li><strong>Ambiguous specs:</strong> requirements came as mockups, prototypes and short messages, with no written design guidelines.</li>
+      </ul>
     </div>
 
-    <div class="cs-section" id="key-decision">
-      <p class="section-label">Key decision</p>
-      <p class="cs-meta">What I chose and what I traded off</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="design">
+      <p class="section-label">How I worked with design</p>
+      <p class="cs-body">The visual direction came from the team: a Figma design system, mockups, and review feedback from the design owner. My job was to bring that direction to life faithfully and flag where it broke down.</p>
+      <ul class="cs-list">
+        <li><strong>Consistent look:</strong> I turned Lea’s colors and fonts into reusable building blocks so every page matched.</li>
+        <li><strong>Mockups to working pages:</strong> I converted static mockups into live components, keeping the originals as the source of truth.</li>
+        <li><strong>Small, reviewable changes:</strong> I shipped in small pieces and revised copy, spacing and details until the design owner signed off.</li>
+      </ul>
+      <p class="cs-body">I didn’t create the visual system. My contribution was getting it right in the real product, handling the cases the mockups didn’t cover, and making product calls where specs were silent.</p>
     </div>
 
-    <div class="cs-section" id="what-i-did">
-      <p class="section-label">What I did</p>
-      <p class="cs-meta">My specific role</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="key-decisions">
+      <p class="section-label">Key decisions and tradeoffs</p>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Sharing quiz results without it breaking</p>
+        <p class="cs-finding-desc">The Lea energy quiz sorts users into four “energies” and lets them share a result card. Phones support sharing an image directly; most desktop browsers don’t. So on mobile it opens the share menu, and on desktop it downloads the image. The flow differs slightly by device, but sharing never silently fails.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Pop-ups everyone can use</p>
+        <p class="cs-finding-desc">The features page opens details in pop-up windows. I made sure people using a keyboard or screen reader can always get in and out of them, and that the page behind doesn’t scroll. Calm design isn’t enough if someone gets stuck in a pop-up.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Seven languages from day one</p>
+        <p class="cs-finding-desc">All text lives in separate language files instead of being written directly into pages. It took more work upfront, and it caught real bugs, like a broken Hindi file that would have shown garbled text.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Prototypes first for speed</p>
+        <p class="cs-finding-desc">For the universities, schools and setup pages, I wrapped the team’s existing prototypes into live pages instead of rebuilding them, so they shipped fast and stayed in sync with the design owner’s files.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Fixing the cause, not just the symptom</p>
+        <p class="cs-finding-desc">When test deploys kept failing, I traced it to a missing configuration setting so the team could fix the root cause instead of re-running builds.</p>
+      </div>
     </div>
 
-    <div class="cs-section" id="result">
-      <p class="section-label">Result</p>
-      <p class="cs-meta">Numbers or learnings</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="shipped">
+      <p class="section-label">What shipped</p>
+      <ul class="cs-list">
+        <li><strong>Lea energy quiz:</strong> an interactive quiz with four question types, four result “energies,” and a share flow</li>
+        <li><strong>Features page:</strong> nine feature sections and six roadmap cards, with accessible detail pop-ups</li>
+        <li><strong>7-language support:</strong> across the platform, including fixing a broken Hindi file</li>
+      </ul>
+      <p class="cs-body">Plus three institutional pages (universities, schools, setup) and a landing page refresh.</p>
+    </div>
+
+    <div class="cs-section" id="reflections">
+      <p class="section-label">Reflections</p>
+      <ul class="cs-list">
+        <li><strong>Constraints sharpen judgment.</strong> Short weekly windows pushed me to ship small, reviewable pieces instead of big rewrites.</li>
+        <li><strong>Implementation is product work.</strong> Details like share fallbacks, keyboard access and missing translations decide whether a design works for real people.</li>
+        <li><strong>Say what you own.</strong> The design system was the team’s. My impact was getting it right, moving fast and catching what the mockups missed.</li>
+      </ul>
     </div>
 
     <div class="cs-section" id="next">
       <p class="section-label">What I’d do next</p>
-      <p class="cs-body">[TBD]</p>
+      <p class="cs-body">Add analytics to see which quiz result gets shared most, test the share flow with real survivors through a partner organization, and write down the design guidelines that currently only live in review comments.</p>
     </div>
 
     <a href="../index.html" class="btn">← Back to Work</a>
