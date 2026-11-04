@@ -24,44 +24,75 @@
   <header class="page-header">
     <p class="page-eyebrow">Case Study · Experience</p>
     <h1 class="page-title">Lotus Foods</h1>
-    <p class="page-lede">EPR packaging compliance reporting tool for Lotus Foods, via FEED @ Berkeley.</p>
+    <p class="page-lede">EPR packaging fee reporting tool for Lotus Foods, via FEED @ Berkeley. In progress.</p>
   </header>
 
   <section class="section" style="border-top:none;">
 
+    <div class="cs-section" id="client">
+      <p class="section-label">The client</p>
+      <p class="cs-body">Lotus Foods is a rice brand selling packaged products across the U.S. New “Extended Producer Responsibility” (EPR) laws act like a packaging tax: brands pay states based on how much packaging they sell and what it’s made of.</p>
+    </div>
+
     <div class="cs-section" id="problem">
       <p class="section-label">The problem</p>
-      <p class="cs-meta">Who’s struggling and why</p>
-      <p class="cs-body">[TBD]</p>
+      <p class="cs-body">Seven states, seven different rulebooks. Each has its own eligibility thresholds, fee formulas, deadlines and penalties, which go up to $25,000/day in Oregon and $50,000/day in California. Lotus needed one repeatable way to report, not seven separate manual processes.</p>
     </div>
 
-    <div class="cs-section" id="research">
-      <p class="section-label">Research</p>
-      <p class="cs-meta">How I learned about users</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="role">
+      <p class="section-label">My role</p>
+      <p class="cs-body">Associate Consultant on an 8-person team. I owned Oregon end to end:</p>
+      <ul class="cs-list">
+        <li><strong>Research:</strong> eligibility, fee structure, penalties and fee-reduction opportunities, which I presented as part of our midterm deliverable</li>
+        <li><strong>Oregon fee calculation:</strong> I built the tab that turns packaging data into an estimated Oregon fee. Its features were integrated into the team’s final MVP.</li>
+        <li><strong>Eco-modulation tab (with a teammate):</strong> Oregon rewards better packaging with discounts and charges extra for worse packaging. We built a tab that applies those bonuses and penalties, so Lotus sees its <em>real</em> fee, not just the base rate, and can see what a packaging change would save.</li>
+      </ul>
     </div>
 
-    <div class="cs-section" id="key-decision">
-      <p class="section-label">Key decision</p>
-      <p class="cs-meta">What I chose and what I traded off</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="findings">
+      <p class="section-label">What I found in Oregon</p>
+      <p class="cs-body">Oregon is already billing, and Lotus’s flexible plastic pouches fall into its most expensive fee category. I recommended three changes:</p>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Switch pouch material</p>
+        <p class="cs-finding-desc">Under Oregon’s published rates, multi-layer plastic costs 102¢/lb versus 43¢/lb for single-layer film. That cuts Lotus’s biggest Oregon fee by more than half.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Lighten the packaging</p>
+        <p class="cs-finding-desc">Fees are charged by weight, so thinner film lowers costs right away. Every EPR state charges by weight, so this saves money everywhere, not just Oregon.</p>
+      </div>
+      <div class="cs-finding">
+        <p class="cs-finding-title">Push bigger bags</p>
+        <p class="cs-finding-desc">A 2 lb bag uses less packaging per pound of rice than two 1 lb bags, and it’s cheaper to produce and ship.</p>
+      </div>
     </div>
 
-    <div class="cs-section" id="what-i-did">
-      <p class="section-label">What I did</p>
-      <p class="cs-meta">My specific role</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="presenting">
+      <p class="section-label">Presenting to the client</p>
+      <p class="cs-body">Lotus found the MVP really useful and had no critiques. Their one question was about risk: would switching from multi-layer to single-layer pouches hurt shelf life?</p>
+      <p class="cs-body">We’d already considered this. Multi-layer film protects against moisture and air, but dry goods like rice keep well in single-layer film. So we scoped the recommendation to Lotus’s dry-goods packaging, where the fee savings don’t come at the cost of product quality. I walked the client through that reasoning on the spot.</p>
     </div>
 
-    <div class="cs-section" id="result">
-      <p class="section-label">Result</p>
-      <p class="cs-meta">Numbers or learnings</p>
-      <p class="cs-body">[TBD]</p>
+    <div class="cs-section" id="tool">
+      <p class="section-label">The tool</p>
+      <p class="cs-body">We translated the research into a spreadsheet with four parts:</p>
+      <ul class="cs-list">
+        <li><strong>Inputs:</strong> products, sales by state, packaging materials and fee rates, entered once</li>
+        <li><strong>State calculations:</strong> each state’s rules applied to the same data</li>
+        <li><strong>Summary:</strong> total estimated fees by state, a 2026 vs. 2027 comparison and a deadline tracker</li>
+        <li><strong>Checks:</strong> flags mistakes like missing weights or unmatched products, plus plain-language formulas so Lotus’s team can trust the math</li>
+      </ul>
+      <p class="cs-body">The eco-modulation tab turned the tool from a reporting tool into a decision tool: Lotus can test a packaging change, like switching pouch film, and see the fee impact before committing.</p>
+      <p class="cs-body"><strong>Key design goal:</strong> cut manual data entry for Lotus’s team.</p>
     </div>
 
     <div class="cs-section" id="next">
-      <p class="section-label">What I’d do next</p>
-      <p class="cs-body">[TBD]</p>
+      <p class="section-label">What’s next</p>
+      <p class="cs-body">Testing the tool on Lotus’s real products, building scenario planning, and delivering a fee-reduction strategy and California source-reduction plan by end of semester.</p>
+    </div>
+
+    <div class="cs-section" id="learned">
+      <p class="section-label">What I learned</p>
+      <p class="cs-body">A recommendation is only as good as the risks you’ve already thought through. Cost savings mean nothing if the product spoils.</p>
     </div>
 
     <a href="../index.html" class="btn">← Back to Work</a>
