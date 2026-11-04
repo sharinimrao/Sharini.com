@@ -460,18 +460,6 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 .notepad li::before { content: ''; width: 16px; height: 16px; border: 2px solid var(--ink); flex-shrink: 0; }
 .notepad li.done::before { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8l4 5 9-12' fill='none' stroke='%231A1A1A' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 2px -3px / 18px; }
 
-/* sage quote scrap */
-.quote-scrap {
-  position: relative;
-  background: var(--sage) var(--noise);
-  padding: 22px 24px 18px;
-  font-size: 14px; line-height: 1.6;
-  box-shadow: var(--shadow-sm);
-  transform: rotate(-1.6deg);
-  clip-path: var(--torn-edge);
-}
-.quote-scrap cite { display: block; margin-top: 8px; font-style: normal; font-size: 12px; text-align: right; }
-
 .doodle { position: absolute; pointer-events: none; color: var(--ink); }
 .doodle--flower { left: -70px; top: 120px; width: 64px; height: 170px; }
 .doodle--spark { right: -18px; top: -22px; width: 36px; height: 36px; }
