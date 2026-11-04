@@ -58,11 +58,27 @@
 
   <section class="section" id="substack">
     <h2 class="section-label">From my Substack</h2>
-    <div class="margins-grid" id="substack-posts">
-      <a class="margin-card margin-card--note" href="https://substack.com/@sharinir" target="_blank" rel="noopener">
-        <p class="post-title">Read my Substack →</p>
+    <div class="margins-grid">
+      <a class="margin-card margin-card--post" href="https://sharinir.substack.com/p/the-in-between" target="_blank" rel="noopener">
+        <img src="../assets/images/substack/the-in-between.jpg" alt="Cover image for the post The In Between" loading="lazy">
+        <p class="post-title">The In Between</p>
+        <p class="post-date">May 2025</p>
+        <p class="post-excerpt">Life Beyond LinkedIn Bullet Points</p>
+      </a>
+      <a class="margin-card margin-card--post" href="https://sharinir.substack.com/p/sunk-cost-fallacy" target="_blank" rel="noopener">
+        <img src="../assets/images/substack/sunk-cost-fallacy.jpg" alt="Cover image for the post Sunk Cost Fallacy" loading="lazy">
+        <p class="post-title">Sunk Cost Fallacy</p>
+        <p class="post-date">Dec 2025</p>
+        <p class="post-excerpt">Why we hold on longer than we should</p>
+      </a>
+      <a class="margin-card margin-card--post" href="https://sharinir.substack.com/p/cakes-and-candles" target="_blank" rel="noopener">
+        <img src="../assets/images/substack/cakes-and-candles.jpg" alt="Cover image for the post Cakes and Candles..." loading="lazy">
+        <p class="post-title">Cakes and Candles...</p>
+        <p class="post-date">May 2025</p>
+        <p class="post-excerpt">When presence replaces the presents</p>
       </a>
     </div>
+    <p class="margins-more"><a href="https://substack.com/@sharinir" target="_blank" rel="noopener">Read more on Substack →</a></p>
   </section>
 
 </main>
@@ -83,43 +99,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-// Latest posts come from /api/substack (a Vercel function). If it fails,
-// the "Read my Substack" card already in the grid stays as the fallback.
-(async function () {
-  const grid = document.getElementById('substack-posts');
-  try {
-    const res = await fetch('/api/substack');
-    if (!res.ok) return;
-    const { posts } = await res.json();
-    if (!posts || !posts.length) return;
-    grid.replaceChildren(...posts.map((post) => {
-      const card = document.createElement('a');
-      card.className = 'margin-card margin-card--note';
-      card.href = post.link;
-      card.target = '_blank';
-      card.rel = 'noopener';
-      const title = document.createElement('p');
-      title.className = 'post-title';
-      title.textContent = post.title;
-      const date = document.createElement('p');
-      date.className = 'post-date';
-      date.textContent = new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-      const excerpt = document.createElement('p');
-      excerpt.className = 'post-excerpt';
-      excerpt.textContent = post.excerpt;
-      const more = document.createElement('p');
-      more.className = 'post-more';
-      more.textContent = 'Read →';
-      card.append(title, date, excerpt, more);
-      return card;
-    }));
-  } catch (err) {
-    // keep the fallback card
-  }
-})();
-</script>
 
 </body>
 </html>

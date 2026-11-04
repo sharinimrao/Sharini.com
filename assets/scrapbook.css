@@ -72,14 +72,14 @@ img { max-width: 100%; display: block; }
 .torn-card,
 .hero,
 .page-header,
-.info-block:has(.hobby-list) {
+.info-block:has(.book-list) {
   position: relative;
   padding: 48px;
   background: var(--kraft);
   clip-path: var(--torn-edge);
 }
 .torn-card--blush,
-.info-block:has(.hobby-list) { background: var(--blush); }
+.info-block:has(.book-list) { background: var(--blush); }
 
 /* ===== 2. tape (decorative; use aria-hidden on real .tape elements) ===== */
 .tape,
