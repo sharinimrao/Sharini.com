@@ -396,3 +396,4 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 .sticker:nth-child(4n+2) { background: var(--blush); transform: rotate(1.5deg); }
 .sticker:nth-child(4n+3) { background: var(--sage); transform: rotate(-0.5deg); }
 .sticker:nth-child(4n) { transform: rotate(2deg); }
+.margins-intro { font-size: 15px; line-height: 1.7; color: var(--ink-soft); max-width: 680px; margin-bottom: 20px; }
