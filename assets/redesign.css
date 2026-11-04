@@ -383,3 +383,16 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 }
 .margins-page .page-lede a { font-family: var(--type); font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .margins-page .page-lede + .page-lede { margin-top: 10px; }
+
+/* Margins: hobbies as sticker tags */
+.sticker-list { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 12px; padding-top: 4px; }
+.sticker {
+  font-family: var(--hand); font-weight: 700; font-size: 21px; line-height: 1.2;
+  padding: 6px 16px; background: var(--white-paper); color: var(--ink);
+  border: 2px solid var(--ink); border-radius: 999px; box-shadow: 2px 3px 0 var(--ink);
+  transform: rotate(-1.5deg);
+}
+.sticker:nth-child(4n+1) { background: var(--butter); }
+.sticker:nth-child(4n+2) { background: var(--blush); transform: rotate(1.5deg); }
+.sticker:nth-child(4n+3) { background: var(--sage); transform: rotate(-0.5deg); }
+.sticker:nth-child(4n) { transform: rotate(2deg); }
