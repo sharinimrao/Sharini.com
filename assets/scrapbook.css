@@ -2,28 +2,31 @@
    Shared tokens + reusable signature classes. Imported by redesign.css and style.css.
    Each signature class also lists the existing page classes it styles, so the
    markup stays untouched (e.g. `.torn-card, .hero`). */
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;600;700&family=Kalam:wght@700&display=swap');
 
 :root {
-  --paper:       #EFE7D6;
-  --kraft:       #CFA67C;
-  --blush:       #EFB4A3;
-  --pink:        #EBA7C0;
-  --sage:        #CFD3BF;
-  --butter:      #F4DF7A;
-  --white-paper: #FFFDF7;
-  --ink:         #1A1A1A;
+  /* white + cobalt palette (was beige + butter yellow) */
+  --paper:       #F8F9FB;
+  --accent:      #2F4BFF;
+  --kraft:       #E2E7FF;
+  --blush:       #F6C8BC;
+  --pink:        #F2B8CD;
+  --sage:        #D4E9DD;
+  --butter:      #C9D3FF;
+  --white-paper: #FFFFFF;
+  --ink:         #141414;
 
-  --ink-soft:    #3D3A34;
-  --ink-faint:   #6B655A;
-  --shadow:      0 6px 18px rgba(60,40,20,0.18);
-  --shadow-sm:   0 3px 10px rgba(60,40,20,0.14);
-  --tape-light:  rgba(241,234,219,0.75);
-  --tape-warm:   rgba(233,216,170,0.85);
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .22 0 0 0 0 .14 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --ink-soft:    #3A3B42;
+  --ink-faint:   #63656E;
+  --shadow:      0 6px 18px rgba(20,24,48,0.16);
+  --shadow-sm:   0 3px 10px rgba(20,24,48,0.12);
+  --tape-light:  rgba(214,220,235,0.75);
+  --tape-warm:   rgba(47,75,255,0.22);
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .22 0 0 0 0 .3 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
-  --hand: 'Gaegu', 'Comic Sans MS', cursive;
-  --type: 'Courier Prime', 'Courier New', monospace;
+  --hand: 'Fraunces', Georgia, serif;
+  --type: 'Inter', system-ui, -apple-system, sans-serif;
+  --script: 'Kalam', 'Comic Sans MS', cursive;
 
   --max: 1180px;
   --gutter: 24px;
@@ -97,7 +100,7 @@ img { max-width: 100%; display: block; }
   width: 110px;
   height: 30px;
   background: var(--tape-warm);
-  box-shadow: 0 1px 2px rgba(60,40,20,0.12);
+  box-shadow: 0 1px 2px rgba(20,24,48,0.12);
   transform: translateX(-50%) rotate(-3deg);
   z-index: 3;
   pointer-events: none;
@@ -197,7 +200,7 @@ img { max-width: 100%; display: block; }
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .btn-solid:hover,
-.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--kraft); }
+.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--accent); }
 
 .btn-link,
 .btn:not(.btn-solid) {
