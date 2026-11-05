@@ -26,7 +26,7 @@
   <header class="page-header">
     <p class="page-eyebrow">Case Study · Class Project</p>
     <h1 class="page-title">Puffin</h1>
-    <p class="page-lede">Making drone simulation workflows more approachable through a browser-based control panel. A CS160 team project consolidating PX4, Gazebo, and ROS 2 setup, monitoring, and control into one dashboard.</p>
+    <p class="page-lede">Making drone simulation workflows more approachable through a browser-based control panel. A CS160 team project that brings the drone’s flight software, the 3D simulator, and the robotics messaging layer together in one dashboard, so setup, monitoring, and control happen in one place.</p>
     <div class="info-row">
       <a href="https://github.com/tim-nguyen0/puffin/" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.8-4.1-1.6-4.1-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
@@ -39,12 +39,16 @@
   <section class="section" style="border-top:none;">
 
     <p class="cs-meta">With Tim Nguyen, Cody Wang, Anjana Niranjanan, and Tien Pham · UC Berkeley, CS160</p>
+    <dl class="notes-block">
+      <dt>My role</dt>
+      <dd>I designed the lo-fi screens, built the Figma prototypes, and built the settings page end to end, both the frontend and the backend.</dd>
+    </dl>
 
     <p class="section-label">Overview</p>
     <div class="grid" style="margin-bottom:2.5rem;">
       <div class="card">
         <h3 class="card-title">The Problem</h3>
-        <p class="card-desc" style="margin-bottom:0;">Running a drone simulation meant specialized knowledge of PX4, Gazebo, and ROS 2 spread across multiple repositories, Docker services, and command-line tools — a fragmented, Linux-oriented workflow that made onboarding a recurring burden for technical leads and blocked non-programming teammates from testing independently.</p>
+        <p class="card-desc" style="margin-bottom:0;">Running a drone simulation meant knowing several specialized tools (flight software, a 3D simulator, and a robotics messaging system) spread across multiple code repositories and command-line tools. It was a fragmented, Linux-only workflow that made onboarding a recurring burden for technical leads and blocked non-programming teammates from testing independently.</p>
       </div>
       <div class="card">
         <h3 class="card-title">Who It Serves</h3>
@@ -62,7 +66,7 @@
       <div class="card">
         <h3 class="card-title">Glen</h3>
         <p class="card-sub">UAV Club Programming Lead</p>
-        <p class="card-desc" style="margin-bottom:0;">Walked us through a Gazebo/PX4/Docker/VNC setup with no clear signal of progress or readiness — onboarding fell repeatedly on him.</p>
+        <p class="card-desc" style="margin-bottom:0;">Walked us through a setup spread across the simulator, the flight software, and a remote-desktop window, with no clear sign of whether anything was ready. Onboarding kept falling on him.</p>
       </div>
       <div class="card">
         <h3 class="card-title">Greg</h3>
@@ -145,10 +149,10 @@
       <img src="../../assets/images/puffin/hifi-concepts.jpg" alt="Three high-fidelity design concepts for Puffin: a dense monitoring layout, an explicit-controls layout, and the modular sidebar-navigation layout that became the foundation">
       <figcaption>High-fidelity concepts explored dense monitoring, explicit simulation controls, and modular navigation.</figcaption>
     </figure>
-    <p class="cs-body">We selected Design 3 as the foundation, then folded in Design 2's explicit controls and Design 1's technical detail. External critique reinforced this: one participant valued the ROS 2 graph for making node/topic relationships visible, the other valued a single place to check service health — both cases where users wanted Puffin to explain how the system's parts relate.</p>
+    <p class="cs-body">We selected Design 3 as the foundation, then folded in Design 2's explicit controls and Design 1's technical detail. External critique reinforced this: one participant valued the ROS 2 graph for showing which parts of the system talk to each other, the other valued a single place to check service health — both cases where users wanted Puffin to explain how the system's parts relate.</p>
 
     <p class="section-label">Final Design &amp; Build</p>
-    <p class="cs-body">Puffin runs in three stages: enter through the launcher and check whether required processes are active (Start/Stop/Reset); monitor the drone through the viewport, telemetry, process state, flight mode, and arming state, with Arm/Takeoff/Land/Disarm controls and physical-controller support; and, if something goes wrong, inspect implicated processes without leaving the app. The Dashboard, ROS2 Services, ROS2 Graph, and a WebSocket-connected floating terminal cover simulation state, lifecycle control, node/topic visualization, and lower-level access respectively. The implemented offboard demo flies a 10m square via a ROS 2 lifecycle node through PX4 offboard setpoints.</p>
+    <p class="cs-body">Puffin works in three steps. <strong>Start:</strong> open the launcher, check that everything the simulation needs is running, and start, stop, or reset it. <strong>Fly and watch:</strong> see the drone in the 3D view alongside live flight data (position, speed, flight mode), and use Arm, Takeoff, Land, and Disarm buttons or a game controller. <strong>Fix:</strong> if something goes wrong, find the broken piece and restart it without leaving the app. A built-in demo flies the drone in a 10-meter square on its own.</p>
     <div class="figure-row">
       <figure class="figure">
         <img src="../../assets/images/puffin/dashboard.jpg" alt="The final Puffin dashboard showing the Gazebo simulation viewport, PX4 flight telemetry, control panel, service health, and simulation process list">
@@ -161,20 +165,18 @@
     </div>
     <div class="stat-row">
       <div class="stat-tile"><div class="stat-num">29+</div><div class="stat-label">Automated backend tests</div></div>
-      <div class="stat-tile"><div class="stat-num">3</div><div class="stat-label">Primary user workflows verified</div></div>
+      <div class="stat-tile"><div class="stat-num">3</div><div class="stat-label">Workflows verified: start, fly, fix</div></div>
       <div class="stat-tile"><div class="stat-num">1</div><div class="stat-label">Unified browser dashboard</div></div>
     </div>
-    <div style="margin-bottom:2.5rem;">
-      <span class="tag">PX4</span> <span class="tag">Gazebo</span> <span class="tag">ROS 2</span> <span class="tag">Docker</span> <span class="tag">WebSocket</span> <span class="tag">REST API</span>
-    </div>
+    <p class="cs-body" style="margin-bottom:2.5rem;">The tests check that the simulation reports its status correctly and starts, stops, and resets on command; that takeoff and landing refuse to run when it isn’t safe; that the dashboard never shows stale flight data; and that each user’s login and saved settings work.</p>
 
     <p class="section-label">Usability Evaluation</p>
     <p class="cs-body">Five moderated think-aloud sessions asked participants to start the simulation and confirm readiness, monitor an autonomous square flight and land the drone, then investigate and recover from a stopped simulation.</p>
     <div class="stat-row">
       <div class="stat-tile"><div class="stat-num">80%</div><div class="stat-label">Completed takeoff (4 of 5)</div></div>
-      <div class="stat-tile"><div class="stat-num">216.8s</div><div class="stat-label">Avg. successful takeoff time</div></div>
-      <div class="stat-tile"><div class="stat-num">1.8</div><div class="stat-label">Avg. facilitator interventions</div></div>
-      <div class="stat-tile"><div class="stat-num">4.0</div><div class="stat-label">Avg. critical features flagged missing</div></div>
+      <div class="stat-tile"><div class="stat-num">216.8s</div><div class="stat-label">Avg. time to takeoff, for the 4 who got there</div></div>
+      <div class="stat-tile"><div class="stat-num">1.8</div><div class="stat-label">Avg. times we had to step in, per session</div></div>
+      <div class="stat-tile"><div class="stat-num">4.0</div><div class="stat-label">Avg. missing features each person called critical</div></div>
     </div>
 
     <div class="figure-row">
@@ -192,16 +194,16 @@
       <div class="cs-finding">
         <p class="cs-finding-title">Readiness was visible but not decisive</p>
         <p class="cs-finding-desc">Users paused to determine whether the simulation, connection, or required services were active.</p>
-        <p class="cs-finding-impl"><strong>Implication:</strong> one system-health summary connecting Gazebo, PX4 SITL, telemetry, process health, and blocking prerequisites to a clear readiness state.</p>
+        <p class="cs-finding-impl"><strong>Implication:</strong> one system-health summary that rolls the simulator, flight software, flight data, and anything still missing into a single clear “ready” or “not ready.”</p>
       </div>
       <div class="cs-finding">
         <p class="cs-finding-title">Control prerequisites were insufficiently explained</p>
-        <p class="cs-finding-desc">One user couldn't locate takeoff; another didn't realize teleop mode and arming came first.</p>
+        <p class="cs-finding-desc">One user couldn't locate takeoff; another didn't realize they had to switch to manual-control mode and arm the drone first.</p>
         <p class="cs-finding-impl"><strong>Implication:</strong> present readiness, mode selection, arming, and takeoff as an ordered pre-flight sequence; disabled controls should explain what's missing.</p>
       </div>
       <div class="cs-finding">
         <p class="cs-finding-title">Technical information was useful but fragmented</p>
-        <p class="cs-finding-desc">Experienced users valued the ROS Nodes and Graph pages; newer users didn't understand their purpose.</p>
+        <p class="cs-finding-desc">Experienced users valued the detailed ROS pages that map out the system; newer users didn't understand their purpose.</p>
         <p class="cs-finding-impl"><strong>Implication:</strong> preserve detailed views, but add plain-language explanations and group related spatial/status information.</p>
       </div>
       <div class="cs-finding">
@@ -228,6 +230,12 @@
 
     <div class="pull-quote">
       Four of five participants completed takeoff, and the detailed ROS screens weren't extraneous complexity — for experienced users, they were among the most valuable features. The gap wasn't technical capability; it was that exposing backend state isn't the same as supporting recovery from it. A usable simulation interface needs to connect system state to meaning, meaning to action, and failure to recovery.
+    </div>
+
+    <p class="section-label">Under the hood</p>
+    <p class="cs-body">Puffin sits on top of PX4 (open-source drone flight software, run here in simulated mode), Gazebo (the 3D physics simulator), and ROS 2 (the messaging system robot programs use to talk to each other), all running in Docker. The browser talks to a backend through a REST API, and a live connection streams flight data and powers a floating terminal for lower-level access. The ROS 2 pages show each running program, how they connect, and let you switch them on and off. The square-flight demo is a ROS 2 program that sends PX4 a stream of target positions.</p>
+    <div style="margin-bottom:2.5rem;">
+      <span class="tag">PX4</span> <span class="tag">Gazebo</span> <span class="tag">ROS 2</span> <span class="tag">Docker</span> <span class="tag">WebSocket</span> <span class="tag">REST API</span>
     </div>
 
     <a href="../index.html" class="btn">← Back to Work</a>
