@@ -229,7 +229,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
 /* Education / Communities: lined paper (line-height locks to the 32px rules) */
 .info-block:has(.plain-list) .info-title { line-height: 32px; margin-bottom: 0; }
-.info-block:has(.plain-list) .exp-role { font-family: var(--hand); font-size: 20px; line-height: 32px; }
+.info-block:has(.plain-list) .exp-role { font-family: var(--script); font-size: 20px; line-height: 32px; }
 .plain-list { list-style: disc; padding-left: 20px; }
 .plain-list li { font-size: 20px; line-height: 32px; color: var(--ink); }
 
@@ -394,7 +394,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
   transform: translateX(-50%) rotate(-3deg); z-index: 3; pointer-events: none;
 }
 .margin-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--sage); }
-.margin-caption { font-family: var(--hand); font-weight: 700; font-size: 21px; line-height: 1.2; margin-top: 10px; text-align: center; }
+.margin-caption { font-family: var(--script); font-weight: 700; font-size: 21px; line-height: 1.2; margin-top: 10px; text-align: center; }
 
 .margin-card--post .post-title { margin-top: 12px; }
 .margins-more { margin-top: 28px; }
@@ -415,7 +415,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 /* Margins: hobbies as sticker tags */
 .sticker-list { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 12px; padding-top: 4px; }
 .sticker {
-  font-family: var(--hand); font-weight: 700; font-size: 21px; line-height: 1.2;
+  font-family: var(--script); font-weight: 700; font-size: 21px; line-height: 1.2;
   padding: 6px 16px; background: var(--white-paper); color: var(--ink);
   border: 2px solid var(--ink); border-radius: 999px; box-shadow: 2px 3px 0 var(--ink);
   transform: rotate(-1.5deg);
@@ -449,7 +449,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
     repeating-linear-gradient(transparent 0 33px, rgba(90,140,200,0.3) 33px 34px);
   background-position: 0 50px;
   padding: 22px 26px 22px 30px;
-  font-family: var(--hand); font-size: 22px; line-height: 34px;
+  font-family: var(--script); font-size: 22px; line-height: 34px;
   box-shadow: var(--shadow-sm);
   transform: rotate(2deg);
   clip-path: polygon(0 6px, 6% 0, 12% 5px, 19% 1px, 26% 6px, 33% 0, 40% 5px, 47% 1px, 54% 6px, 61% 0, 68% 5px, 75% 1px, 82% 6px, 89% 0, 95% 5px, 100% 1px, 100% 100%, 0 100%);
