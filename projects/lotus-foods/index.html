@@ -26,10 +26,12 @@
   <header class="page-header">
     <p class="page-eyebrow">Case Study · Experience</p>
     <h1 class="page-title">Lotus Foods</h1>
-    <p class="page-lede">EPR packaging fee reporting tool for Lotus Foods, via FEED @ Berkeley. In progress.</p>
+    <p class="page-lede">EPR packaging fee reporting tool for Lotus Foods, via FEED, a student consulting club at Berkeley. In progress.</p>
   </header>
 
   <section class="section" style="border-top:none;">
+
+    <p class="cs-summary">I built Oregon’s fee calculator for a 7-state packaging tool and found a switch that could cut Lotus’s biggest Oregon fee by more than half. The client found the tool really useful and had no critiques.</p>
 
     <div class="cs-section" id="client">
       <p class="section-label">The client</p>
@@ -46,8 +48,8 @@
       <p class="cs-body">Associate Consultant on an 8-person team. I owned Oregon end to end:</p>
       <ul class="cs-list">
         <li><strong>Research:</strong> eligibility, fee structure, penalties and fee-reduction opportunities, which I presented as part of our midterm deliverable</li>
-        <li><strong>Oregon fee calculation:</strong> I built the tab that turns packaging data into an estimated Oregon fee. Its features were integrated into the team’s final MVP.</li>
-        <li><strong>Eco-modulation tab (with a teammate):</strong> Oregon rewards better packaging with discounts and charges extra for worse packaging. We built a tab that applies those bonuses and penalties, so Lotus sees its <em>real</em> fee, not just the base rate, and can see what a packaging change would save.</li>
+        <li><strong>Oregon fee calculation:</strong> I built the tab that turns packaging data into an estimated Oregon fee. Its features were integrated into the team’s first version of the tool.</li>
+        <li><strong>Eco-modulation tab (with a teammate):</strong> Eco-modulation is Oregon’s discounts and surcharges based on how recyclable your packaging is. Oregon rewards better packaging with discounts and charges extra for worse packaging. We built a tab that applies those bonuses and penalties, so Lotus sees its <em>real</em> fee, not just the base rate, and can see what a packaging change would save.</li>
       </ul>
     </div>
 
@@ -70,12 +72,16 @@
 
     <div class="cs-section" id="presenting">
       <p class="section-label">Presenting to the client</p>
-      <p class="cs-body">Lotus found the MVP really useful and had no critiques. Their one question was about risk: would switching from multi-layer to single-layer pouches hurt shelf life?</p>
+      <p class="cs-body">Lotus found the first version of the tool really useful and had no critiques. Their one question was about risk: would switching from multi-layer to single-layer pouches hurt shelf life?</p>
       <p class="cs-body">We’d already considered this. Multi-layer film protects against moisture and air, but dry goods like rice keep well in single-layer film. So we scoped the recommendation to Lotus’s dry-goods packaging, where the fee savings don’t come at the cost of product quality. I walked the client through that reasoning on the spot.</p>
     </div>
 
     <div class="cs-section" id="tool">
       <p class="section-label">The tool</p>
+      <figure class="figure figure--column">
+        <img src="../../assets/images/lotus/lotus-tool-flow.png" alt="Diagram of the reporting tool: input tabs feed calculations for 7 states, which roll up into fee and packaging weight summaries." loading="lazy">
+        <figcaption>Lotus enters its data once, and the tool runs it through each state’s rules.</figcaption>
+      </figure>
       <p class="cs-body">We translated the research into a spreadsheet with four parts:</p>
       <ul class="cs-list">
         <li><strong>Inputs:</strong> products, sales by state, packaging materials and fee rates, entered once</li>
@@ -83,13 +89,17 @@
         <li><strong>Summary:</strong> total estimated fees by state, a 2026 vs. 2027 comparison and a deadline tracker</li>
         <li><strong>Checks:</strong> flags mistakes like missing weights or unmatched products, plus plain-language formulas so Lotus’s team can trust the math</li>
       </ul>
+      <figure class="figure figure--column">
+        <img src="../../assets/images/lotus/lotus-tool-inputs.png" alt="Spreadsheet input tabs for products, sales, packaging materials and fee rates, filled with sample data." loading="lazy">
+        <figcaption>Input tabs, shown with sample data.</figcaption>
+      </figure>
       <p class="cs-body">The eco-modulation tab turned the tool from a reporting tool into a decision tool: Lotus can test a packaging change, like switching pouch film, and see the fee impact before committing.</p>
       <p class="cs-body"><strong>Key design goal:</strong> cut manual data entry for Lotus’s team.</p>
     </div>
 
     <div class="cs-section" id="next">
       <p class="section-label">What’s next</p>
-      <p class="cs-body">Testing the tool on Lotus’s real products, building scenario planning, and delivering a fee-reduction strategy and California source-reduction plan by end of semester.</p>
+      <p class="cs-body">Testing the tool on Lotus’s real products, building scenario planning, and delivering a fee-reduction strategy and a plan to use less packaging in California by end of semester.</p>
     </div>
 
     <div class="cs-section" id="learned">

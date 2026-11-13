@@ -295,6 +295,8 @@ footer::before {
 .figure { position: relative; margin-bottom: 32px; background: var(--white-paper); padding: 14px 14px 18px; box-shadow: var(--shadow); }
 .figure img { width: 100%; display: block; background: var(--sage); }
 .figure figcaption { font-size: 13px; color: var(--ink-soft); margin-top: 12px; line-height: 1.5; }
+.figure--column { max-width: 760px; }
+.cs-summary { max-width: 760px; background: var(--butter); color: var(--ink); font-size: 16px; line-height: 1.7; padding: 16px 20px; margin-bottom: 40px; }
 .figure-row { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 32px; }
 .figure-row .figure { flex: 1 1 260px; margin-bottom: 0; transform: rotate(-0.8deg); }
 .figure-row .figure:nth-child(even) { transform: rotate(0.9deg); }
