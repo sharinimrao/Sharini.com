@@ -1,6 +1,7 @@
 {
   "redirects": [
     { "source": "/projects/skin-community", "destination": "/projects/skinship/", "permanent": true },
+    { "source": "/projects/skin-community/", "destination": "/projects/skinship/", "permanent": true },
     { "source": "/projects/skin-community/:path*", "destination": "/projects/skinship/", "permanent": true }
   ]
 }

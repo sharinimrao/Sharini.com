@@ -29,16 +29,27 @@
     <p class="page-lede">Do Combine drills actually predict which receivers get open? In progress for the 2027 competition.</p>
   </header>
 
+  <aside class="glance" aria-label="At a glance">
+    <p class="glance-title">At a glance</p>
+    <dl class="glance-list">
+      <div><dt>Role</dt><dd>Solo</dd></div>
+      <div><dt>Team</dt><dd>Solo</dd></div>
+      <div><dt>Timeline</dt><dd>Fall 2026 – competition deadline</dd></div>
+      <div><dt>Tools</dt><dd>Python, NFL player-tracking data</dd></div>
+      <div><dt>Outcome</dt><dd>In progress</dd></div>
+    </dl>
+  </aside>
+
   <section class="section" style="border-top:none;">
 
     <div class="cs-section" id="question">
       <p class="section-label">The question</p>
-      <p class="cs-body">Do the movement skills receivers show at the NFL Combine translate to getting open in real games, and do they tell teams more than the drill times already do?</p>
+      <p class="cs-body">The NFL Combine is the yearly event where college players run timed drills in front of teams before the draft. Do the movement skills receivers show there translate to getting open in real games, and do they tell teams more than the drill times already do?</p>
     </div>
 
     <div class="cs-section" id="why">
       <p class="section-label">Why it matters</p>
-      <p class="cs-body">Teams use Combine drills like the 3-cone and shuttle to evaluate a receiver’s agility, but those are just stopwatch times. They don’t show <em>how</em> a player cuts, and they don’t account for the defender. If tracking data can show which movement skills lead to getting open, teams can spot prospects whose drill times undersell or oversell them.</p>
+      <p class="cs-body">Teams use Combine drills like the 3-cone drill and the shuttle run (short sprints with sharp turns) to judge a receiver’s agility, but those are just stopwatch times. They don’t show <em>how</em> a player changes direction, and there’s no defender. The NFL’s player-tracking data records every player’s position and speed many times a second during real games. If that data can show which movement skills lead to getting open, teams can spot draft prospects whose drill times undersell or oversell them.</p>
     </div>
 
     <div class="cs-section" id="users">
@@ -53,11 +64,11 @@
       <p class="section-label">My approach</p>
       <div class="cs-finding">
         <p class="cs-finding-title">1. Pick routes with one clear cut</p>
-        <p class="cs-finding-desc">Slant, out, curl/hitch and dig. Each has a single sharp change of direction, so the cut is easy to isolate. I left out go routes because the 40-yard dash already measures straight-line speed.</p>
+        <p class="cs-finding-desc">A route is the path a receiver runs on a play, and a cut is a sharp change of direction. I chose four routes (slant, out, curl/hitch and dig) where the receiver runs forward and then makes one sharp cut, so it’s easy to isolate. I left out go routes (straight sprints down the field) because the 40-yard dash already measures straight-line speed.</p>
       </div>
       <div class="cs-finding">
         <p class="cs-finding-title">2. Define “getting open”</p>
-        <p class="cs-finding-desc">Distance to the nearest defender at a set time after the cut and at the moment of the throw, adjusted for coverage type, alignment and defender where the data allows.</p>
+        <p class="cs-finding-desc">Distance to the nearest defender at a set time after the cut and at the moment of the throw. Where the data allows, I adjust for the kind of defense he faced, where players lined up, and who was guarding him.</p>
       </div>
       <div class="cs-finding">
         <p class="cs-finding-title">3. Measure three things about each cut</p>
@@ -69,7 +80,7 @@
       </div>
       <div class="cs-finding">
         <p class="cs-finding-title">4. Test what drill times miss</p>
-        <p class="cs-finding-desc">Compare two models: one using only Combine drill times, and one that adds the tracking-based cut measurements. If the second predicts getting open better, by route, the movement data is telling teams something new.</p>
+        <p class="cs-finding-desc">Build two statistical predictions of how open a receiver gets: one using only Combine drill times, and one that also uses the cut measurements from tracking data. If the second predicts getting open better on each route, the movement data is telling teams something new.</p>
       </div>
     </div>
 
@@ -85,7 +96,7 @@
 
     <div class="cs-section" id="data">
       <p class="section-label">Data</p>
-      <p class="cs-body">Player-tracking data from the <a href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2027" target="_blank" rel="noopener">NFL Big Data Bowl 2027 on Kaggle</a>.</p>
+      <p class="cs-body">Player-tracking data from the <a href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2027" target="_blank" rel="noopener">NFL Big Data Bowl 2027 on Kaggle</a>, a site that hosts data science competitions.</p>
     </div>
 
     <a href="../index.html" class="btn">← Back to Work</a>

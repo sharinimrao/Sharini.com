@@ -29,6 +29,17 @@
     <p class="page-lede">Building a trauma-informed product as a student engineer.</p>
   </header>
 
+  <aside class="glance" aria-label="At a glance">
+    <p class="glance-title">At a glance</p>
+    <dl class="glance-list">
+      <div><dt>Role</dt><dd>Part-time software engineering intern (front end)</dd></div>
+      <div><dt>Team</dt><dd>Legali product team</dd></div>
+      <div><dt>Timeline</dt><dd>Summer 2026</dd></div>
+      <div><dt>Tools</dt><dd>Next.js, Tailwind, Figma handoff</dd></div>
+      <div><dt>Outcome</dt><dd>Shipped an interactive quiz, a features page and 7-language support</dd></div>
+    </dl>
+  </aside>
+
   <section class="section" style="border-top:none;">
 
     <div class="cs-section" id="intro">
@@ -49,9 +60,8 @@
 
     <div class="cs-section" id="role">
       <p class="section-label">My role and constraints</p>
-      <p class="cs-body">Part-time, remote software engineering intern, about 15 hours a week, across three codebases. I was the engineer closest to the work, and I made many of the small product calls the specs left open.</p>
+      <p class="cs-body">Part-time, remote software engineering intern, about 15 hours a week, across three codebases. I was the engineer closest to the work, and I made the small product calls the specs left open, like how sharing should work on desktop and how pop-ups handle keyboard users.</p>
       <ul class="cs-list">
-        <li><strong>Short weekly windows:</strong> I picked work I could ship in small pieces.</li>
         <li><strong>Remote and async:</strong> feedback came through review cycles, not hallway conversations.</li>
         <li><strong>Ambiguous specs:</strong> requirements came as mockups, prototypes and short messages, with no written design guidelines.</li>
       </ul>
@@ -65,7 +75,7 @@
         <li><strong>Mockups to working pages:</strong> I converted static mockups into live components, keeping the originals as the source of truth.</li>
         <li><strong>Small, reviewable changes:</strong> I shipped in small pieces and revised copy, spacing and details until the design owner signed off.</li>
       </ul>
-      <p class="cs-body">I didn’t create the visual system. My contribution was getting it right in the real product, handling the cases the mockups didn’t cover, and making product calls where specs were silent.</p>
+      <p class="cs-body">I didn’t create the visual system. My contribution was getting it right in the real product and handling the cases the mockups didn’t cover.</p>
     </div>
 
     <div class="cs-section" id="key-decisions">
@@ -78,10 +88,6 @@
         <p class="cs-finding-title">Pop-ups everyone can use</p>
         <p class="cs-finding-desc">The features page opens details in pop-up windows. I made sure people using a keyboard or screen reader can always get in and out of them, and that the page behind doesn’t scroll. Calm design isn’t enough if someone gets stuck in a pop-up.</p>
       </div>
-      <figure class="figure figure--column">
-        <img src="../../assets/images/legali/features-dialog-desktop.png" alt="Lea features page with the Safety Tools detail pop-up open, listing Quick Exit, Disguise Mode, Apple Watch panic tap and PIN-protected storage" loading="lazy">
-        <figcaption>A feature detail pop-up on the live features page.</figcaption>
-      </figure>
       <div class="cs-finding">
         <p class="cs-finding-title">Seven languages from day one</p>
         <p class="cs-finding-desc">All text lives in separate language files instead of being written directly into pages. It took more work upfront, and it caught real bugs, like a broken Hindi file that would have shown garbled text.</p>
@@ -127,6 +133,10 @@
         <img src="../../assets/images/legali/features-desktop.png" alt="Top of the Lea features page: For every step, whenever you take it, with stats for users, states covered, languages and conversation modes" loading="lazy">
         <figcaption>The features page as it shipped.</figcaption>
       </figure>
+      <figure class="figure figure--column">
+        <img src="../../assets/images/legali/features-dialog-desktop.png" alt="Lea features page with the Safety Tools detail pop-up open, listing Quick Exit, Disguise Mode, Apple Watch panic tap and PIN-protected storage" loading="lazy">
+        <figcaption>A feature detail pop-up on the live features page.</figcaption>
+      </figure>
       <p class="cs-body">Plus three institutional pages (universities, schools, setup) and a landing page refresh.</p>
     </div>
 
@@ -135,7 +145,6 @@
       <ul class="cs-list">
         <li><strong>Constraints sharpen judgment.</strong> Short weekly windows pushed me to ship small, reviewable pieces instead of big rewrites.</li>
         <li><strong>Implementation is product work.</strong> Details like share fallbacks, keyboard access and missing translations decide whether a design works for real people.</li>
-        <li><strong>Say what you own.</strong> The design system was the team’s. My impact was getting it right, moving fast and catching what the mockups missed.</li>
       </ul>
     </div>
 

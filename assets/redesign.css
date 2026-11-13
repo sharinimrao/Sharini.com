@@ -39,8 +39,8 @@
 }
 .nav-links { display: flex; flex-wrap: wrap; gap: 8px 36px; list-style: none; }
 .nav-links a {
-  font-family: var(--type);
-  font-size: 15px;
+  font-family: var(--mono);
+  font-size: 14px;
   font-weight: 400;
   color: var(--ink);
   padding: 2px 4px;
@@ -107,7 +107,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 }
 .hero-grid { display: flex; gap: 48px; align-items: flex-start; justify-content: space-between; }
 .hero-text { flex: 1 1 auto; min-width: 0; }
-.hero-lede { font-size: 15px; line-height: 1.7; margin-bottom: 24px; max-width: 640px; }
+.hero-lede { font-size: 17px; line-height: 1.65; margin-bottom: 24px; max-width: 640px; }
 .hero-lede:last-child { margin-bottom: 0; }
 
 .hero-photos {
@@ -148,6 +148,9 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 @media (prefers-reduced-motion: reduce) {
   .project-card, .project-thumb img { transition: none; }
 }
+/* cards without a case study link stay put on hover */
+.project-card--static:hover { transform: rotate(-0.5deg); box-shadow: var(--shadow); }
+.project-card--static:hover .project-thumb img { transform: none; }
 
 .section-intro { font-size: 13px; color: var(--ink-faint); margin: -4px 0 18px; }
 .projects-grid--compact { gap: 20px; }
@@ -195,9 +198,9 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 .card-links a {
   display: inline-flex; align-items: center; gap: 6px;
   min-height: 44px;
-  font-family: var(--type);
-  font-weight: 700;
-  font-size: 14px;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 13px;
   color: var(--ink);
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -220,7 +223,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 .card:nth-child(odd)::before { width: 90px; height: 26px; top: -12px; }
 .card-title { font-family: var(--hand); font-weight: 700; font-size: 24px; line-height: 1.15; margin-bottom: 6px; }
 .card-sub { font-size: 13px; font-weight: 700; color: var(--ink-faint); margin-bottom: 8px; }
-.card-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 12px; }
+.card-desc { font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 12px; }
 .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
 .card-links { display: flex; gap: 18px; flex-wrap: wrap; }
 
@@ -245,7 +248,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 }
 .exp-item { margin-bottom: 16px; }
 .exp-item:last-child { margin-bottom: 0; }
-.exp-role { font-weight: 700; font-size: 15px; line-height: 1.5; }
+.exp-role { font-weight: 700; font-size: 17px; line-height: 1.5; }
 .exp-date { font-size: 13px; color: var(--ink-faint); margin-top: 2px; }
 
 /* Education / Communities: lined paper (line-height locks to the 32px rules) */
@@ -294,7 +297,7 @@ footer::before {
 .page-header { margin: 40px 0 8px; }
 .page-eyebrow { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
 .page-title { font-family: var(--hand); font-weight: 700; font-size: clamp(40px, 5vw, 60px); line-height: 1; margin-bottom: 12px; }
-.page-lede { font-size: 15px; max-width: 620px; line-height: 1.7; }
+.page-lede { font-size: 17px; max-width: 640px; line-height: 1.65; }
 .info-row { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; }
 
 /* ===== case study pages ===== */
@@ -302,14 +305,14 @@ footer::before {
 .cs-section:last-of-type { margin-bottom: 32px; }
 .cs-meta { font-size: 13px; color: var(--ink-faint); margin-bottom: 28px; }
 .cs-section .cs-meta { margin: -12px 0 12px; }
-.cs-body { font-size: 15px; color: var(--ink-soft); line-height: 1.75; max-width: 760px; margin-bottom: 24px; }
+.cs-body { font-size: 17px; color: var(--ink-soft); line-height: 1.65; max-width: 760px; margin-bottom: 24px; }
 .cs-body:last-child { margin-bottom: 0; }
 .cs-list { list-style: disc; padding-left: 20px; max-width: 760px; margin-bottom: 24px; }
-.cs-list li { font-size: 15px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 6px; }
+.cs-list li { font-size: 17px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 6px; }
 .cs-list strong, .cs-body strong { color: var(--ink); }
 .cs-list--steps { list-style: decimal; }
 .cs-table-wrap { max-width: 760px; overflow-x: auto; margin-bottom: 24px; }
-.cs-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+.cs-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
 .cs-table th { text-align: left; font-weight: 700; color: var(--ink); padding: 10px 12px; border-bottom: 2px solid var(--ink); }
 .cs-table td { vertical-align: top; padding: 12px; border-bottom: 1px solid rgba(0,0,0,0.12); }
 
@@ -317,7 +320,7 @@ footer::before {
 .figure img { width: 100%; display: block; background: var(--sage); }
 .figure figcaption { font-size: 13px; color: var(--ink-soft); margin-top: 12px; line-height: 1.5; }
 .figure--column { max-width: 760px; }
-.cs-summary { max-width: 760px; background: var(--butter); color: var(--ink); font-size: 16px; line-height: 1.7; padding: 16px 20px; margin-bottom: 40px; }
+.cs-summary { max-width: 760px; background: var(--butter); color: var(--ink); font-size: 17px; line-height: 1.65; padding: 16px 20px; margin-bottom: 40px; }
 .figure-row { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 32px; }
 .figure-row .figure { flex: 1 1 260px; margin-bottom: 0; transform: rotate(-0.8deg); }
 .figure-row .figure:nth-child(even) { transform: rotate(0.9deg); }
@@ -335,18 +338,18 @@ footer::before {
 .stat-tile .stat-num { font-family: var(--hand); font-weight: 700; font-size: 32px; line-height: 1; }
 .stat-tile .stat-label { font-size: 12px; color: var(--ink-soft); margin-top: 6px; line-height: 1.4; }
 
-.pull-quote { font-size: 15px; line-height: 1.75; margin-bottom: 40px; max-width: 760px; }
+.pull-quote { font-size: 17px; line-height: 1.65; margin-bottom: 40px; max-width: 760px; }
 
 .cs-finding { margin-bottom: 24px; max-width: 760px; }
 .cs-finding:last-child { margin-bottom: 0; }
 .cs-finding-title { font-family: var(--hand); font-weight: 700; font-size: 22px; line-height: 1.2; margin-bottom: 4px; }
-.cs-finding-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 6px; }
-.cs-finding-impl { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+.cs-finding-desc { font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 6px; }
+.cs-finding-impl { font-size: 17px; color: var(--ink-soft); line-height: 1.6; }
 .cs-finding-impl strong { color: var(--ink); }
 
 .notes-block { margin-bottom: 40px; transform: rotate(-0.4deg); }
 .notes-block dt { font-family: var(--hand); font-weight: 700; font-size: 21px; line-height: 1.2; margin-bottom: 4px; }
-.notes-block dd { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 16px; }
+.notes-block dd { font-size: 17px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 16px; }
 .notes-block dd:last-child { margin-bottom: 0; }
 
 /* ===== photo grid (sports): mini polaroids ===== */
@@ -421,7 +424,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 
 .margin-card--post .post-title { margin-top: 12px; }
 .margins-more { margin-top: 28px; }
-.margins-more a { font-family: var(--type); font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.margins-more a { font-family: var(--mono); font-weight: 600; font-size: 13px; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .post-title { font-family: var(--hand); font-weight: 700; font-size: 22px; line-height: 1.15; }
 .post-date { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); margin: 4px 0 6px; }
 .post-excerpt { font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
@@ -432,7 +435,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 @media (max-width: 560px) {
   .margins-grid { grid-template-columns: 1fr; }
 }
-.margins-page .page-lede a { font-family: var(--type); font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.margins-page .page-lede a { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .margins-page .page-lede + .page-lede { margin-top: 10px; }
 
 /* Margins: hobbies as sticker tags */
@@ -447,7 +450,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 .sticker:nth-child(4n+2) { background: var(--blush); transform: rotate(1.5deg); }
 .sticker:nth-child(4n+3) { background: var(--sage); transform: rotate(-0.5deg); }
 .sticker:nth-child(4n) { transform: rotate(2deg); }
-.margins-intro { font-size: 15px; line-height: 1.7; color: var(--ink-soft); max-width: 680px; margin-bottom: 20px; }
+.margins-intro { font-size: 17px; line-height: 1.65; color: var(--ink-soft); max-width: 680px; margin-bottom: 20px; }
 
 /* ===== About: collage hero ===== */
 .collage { position: relative; display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 40px; align-items: start; margin: 48px 0 24px; }
@@ -455,7 +458,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 .collage-card .hero-name { font-size: clamp(44px, 6vw, 72px); margin-bottom: 6px; }
 .marker-underline { display: block; width: min(320px, 70%); height: 14px; margin-bottom: 18px; }
 .collage-card .hero-eyebrow { margin-bottom: 22px; }
-.collage-card .hero-lede { font-size: 15px; line-height: 1.75; margin-bottom: 16px; max-width: 660px; }
+.collage-card .hero-lede { font-size: 17px; line-height: 1.65; margin-bottom: 16px; max-width: 660px; }
 .hero-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-top: 26px; }
 
 /* pink smiley sticker on the corner of the kraft card */
@@ -548,7 +551,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 .album-dialog-title { font-family: var(--hand); font-weight: 700; font-size: 34px; line-height: 1; }
 .album-close {
   appearance: none; border: 2px solid var(--ink); background: var(--white-paper); color: var(--ink); cursor: pointer;
-  font-family: var(--type); font-weight: 700; font-size: 14px; min-height: 44px; padding: 0 16px;
+  font-family: var(--mono); font-weight: 600; font-size: 13px; min-height: 44px; padding: 0 16px;
 }
 .album-close:hover { background: var(--butter); }
 .album-dialog .margins-grid { padding: 16px 28px 40px; }
@@ -591,4 +594,16 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
   display: block; aspect-ratio: 4 / 3;
   border: 2px dashed rgba(26,26,26,0.35);
   background: rgba(212,233,221,0.35) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40' fill='none' stroke='%2363656E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h9l4-6h14l4 6h9v24H4z'/%3E%3Ccircle cx='24' cy='22' r='8'/%3E%3C/svg%3E") no-repeat center / 44px;
+}
+
+/* ===== case study: "at a glance" summary box ===== */
+.glance { position: relative; max-width: 760px; margin: 28px 0 0; padding: 22px 26px 16px; background: var(--white-paper); box-shadow: var(--shadow-sm); transform: rotate(-0.3deg); }
+.glance-title { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+.glance-list > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 10px 0; border-top: 1px solid rgba(20,20,20,0.1); }
+.glance-list > div:first-child { border-top: 0; }
+.glance-list dt { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); padding-top: 3px; }
+.glance-list dd { font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
+@media (max-width: 560px) {
+  .glance { padding: 18px 18px 12px; }
+  .glance-list > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
 }
