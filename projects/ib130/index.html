@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharini Rao — Butterfly-Inspired Solar Fruit Dryer Case Study</title>
-<meta name="description" content="Butterfly-Inspired Solar Fruit Dryer: a case study by Sharini Rao.">
+<title>Sharini Rao — Whirligig Beetle–Inspired Swimming Robot Case Study</title>
+<meta name="description" content="Whirligig Beetle–Inspired Swimming Robot: a case study by Sharini Rao.">
 <link rel="stylesheet" href="../../assets/redesign.css">
 </head>
 <body>
@@ -25,84 +25,145 @@
 
   <header class="page-header">
     <p class="page-eyebrow">Case Study · Class Project (IB 130)</p>
-    <h1 class="page-title">Butterfly-Inspired Solar Fruit Dryer</h1>
-    <p class="page-lede">A self-regulating solar dryer that turns surplus produce into shelf-stable food. Currently building.</p>
+    <h1 class="page-title">Whirligig Beetle–Inspired Swimming Robot</h1>
+    <p class="page-lede">A two-motor paddle robot that borrows the fastest-swimming insect’s paired paddles and steering to swim, spin, and zig-zag across open water.</p>
   </header>
 
   <section class="section" style="border-top:none;">
 
-    <div class="cs-section" id="problem">
-      <p class="section-label">The problem</p>
-      <p class="cs-body">About a third of the U.S. food supply ends up as surplus, and produce makes up the biggest share of food waste. Community food spaces like food banks, pantries and farmers markets often receive produce that’s already near the end of its shelf life, without the refrigeration to store it.</p>
-      <p class="cs-body">Solar drying can preserve that food for months without electricity, but open-air drying has real problems: rain, humidity swings, pests, and heat that “bakes” fruit and destroys nutrients like vitamin C.</p>
-      <p class="cs-body"><strong>How might we</strong> help communities without reliable refrigeration save surplus produce, safely and cheaply?</p>
-    </div>
+    <p class="cs-meta">With Sofia Favalli, Emilio Paz, Juliet Swimmer, and Cleo Topp · UC Berkeley, IB 130</p>
 
-    <div class="cs-section" id="users">
-      <p class="section-label">Who it’s for</p>
-      <p class="cs-body">Places with lots of produce and no cold storage: food banks and pantries, community gardens, small farms and farmers markets. Picture a pantry that receives a large load of slightly bruised fruit that has to go out within a day. Instead of the leftovers rotting, the dryer turns them into shelf-stable snacks.</p>
+    <figure class="figure">
+      <img src="../../assets/images/whirligig/robot-fountain.jpg" alt="The finished robot: an orange food-container hull with white 3D-printed paddle wheels on each side, resting at the edge of a campus fountain">
+      <figcaption>The finished robot at the fountain where we tested it.</figcaption>
+    </figure>
+
+    <div class="cs-section" id="problem">
+      <p class="section-label">The challenge</p>
+      <p class="cs-body">IB 130 asked us to take a mechanism from a living organism and carry it into a working engineered device. We chose the whirligig beetle, the fastest-swimming insect. It reaches about 100 body lengths per second and peak accelerations of about 100 m/s², and it can turn and circle almost instantly on the water’s surface.</p>
+      <p class="cs-body"><strong>Our question:</strong> can two independently driven paddle wheels reproduce the beetle’s surface swimming and tight turning with a simple, low-cost build?</p>
     </div>
 
     <div class="cs-section" id="role">
       <p class="section-label">My role</p>
       <p class="cs-body">On a 5-person team:</p>
       <ul class="cs-list">
-        <li><strong>Came up with the idea</strong> and pitched it to the team</li>
-        <li><strong>System design:</strong> drew the design and decided how the technology works, where each part goes and how everything operates together</li>
-        <li><strong>Technology (with one teammate):</strong> wrote the Arduino code, did the wiring, and designed the box in CAD</li>
-        <li><strong>Research:</strong> problem research (food bank surplus, open-air vs. enclosed drying, nutrient loss) and matched three butterfly mechanisms to design decisions, backed by existing dryer studies</li>
+        <li><strong>Biology research (with one teammate):</strong> studied how the beetle swims and turns, and pulled out the traits we could realistically build</li>
+        <li><strong>Electronics and testing (whole team):</strong> wiring, Arduino setup, and running the bench, leak, float, and water tests</li>
+        <li><strong>Presentation (whole team):</strong> the final deck and the analogy check between beetle and robot</li>
       </ul>
-      <p class="cs-body">Teammates led materials and visual design.</p>
+      <p class="cs-body">Teammates led the CAD for the paddle wheels.</p>
     </div>
 
-    <div class="cs-section" id="research">
-      <p class="section-label">What we learned from research</p>
+    <div class="cs-section" id="biology">
+      <p class="section-label">What we learned from the beetle</p>
       <ul class="cs-list">
-        <li><strong>Enclosed dryers beat open sun:</strong> faster, cleaner and safer, but only if they’re cheap and simple enough for people to actually use</li>
-        <li><strong>Too much heat hurts quality:</strong> dryers that overheat brown the fruit and lower its vitamin C, so temperature control matters as much as heat</li>
-        <li><strong>Airflow is a big deal:</strong> moving air made one of the biggest differences in how fast and safely food dried</li>
+        <li><strong>Lift, not just push:</strong> the beetle’s flattened hind legs work like hydrofoils, producing lift-based thrust. That’s the secret to its speed (Sun et al., 2024).</li>
+        <li><strong>Paired paddles:</strong> its swimming legs sit symmetrically on both sides, so the two sides can work together or separately.</li>
+        <li><strong>Steering by imbalance:</strong> it turns by paddling harder with its outside legs, which lets it circle and change direction very quickly.</li>
       </ul>
     </div>
 
     <div class="cs-section" id="design-decisions">
       <p class="section-label">Design decisions (and why)</p>
-      <p class="cs-body">Butterflies have to manage solar heat to survive: collect it, direct it, and avoid getting too much. A solar dryer faces the same three problems, so we borrowed one solution for each.</p>
+      <p class="cs-body">We copied the beetle’s behavior (what it does and how it steers) and simplified its physics (how it makes thrust). Our analogy check, side by side:</p>
       <div class="cs-table-wrap">
         <table class="cs-table">
           <thead>
-            <tr><th>Butterfly trick</th><th>Dryer feature</th><th>Why</th></tr>
+            <tr><th>Category</th><th>Whirligig beetle</th><th>Our robot</th><th>Match</th></tr>
           </thead>
           <tbody>
-            <tr><td>Black wing scales trap light with tiny, randomly placed holes</td><td>Textured matte-black absorber panel under the trays</td><td>A rough surface catches more sun than a flat one, even as the sun moves</td></tr>
-            <tr><td>White butterflies angle their wings in a V to bounce light onto their bodies</td><td>Two white reflective flaps around the clear lid</td><td>Reflectors have been shown to cut drying time on sunny days, and lightweight materials are enough</td></tr>
-            <tr><td>Butterflies sense wing heat and turn away within seconds when it gets too hot</td><td>Arduino + temperature sensor that controls the flaps, vent and fan</td><td>Protects color and nutrients; existing Arduino dryers control fans, but also moving reflective flaps is our twist</td></tr>
+            <tr><td>Function</td><td>Fast swimming, sharp turns</td><td>Surface swimming, spins in place</td><td>Similar</td></tr>
+            <tr><td>Steering</td><td>Outside legs paddle harder</td><td>One motor runs alone or faster</td><td>Similar</td></tr>
+            <tr><td>Environment</td><td>Ponds</td><td>Campus fountain</td><td>Similar</td></tr>
+            <tr><td>Structure</td><td>Oval body</td><td>Rectangular plastic container</td><td>Different</td></tr>
+            <tr><td>Propulsion</td><td>Folding hind legs, lift-based stroke</td><td>Paddle wheels, drag-based push</td><td>Different</td></tr>
+            <tr><td>Size</td><td>About 1 cm</td><td>21 cm</td><td>Different</td></tr>
           </tbody>
         </table>
       </div>
       <p class="cs-body"><strong>Tradeoffs we made:</strong></p>
       <ul class="cs-list">
-        <li><strong>Scaled-up texture.</strong> We can’t recreate nanoscale holes, so the panel uses 3D-printed bumpy tiles. Honest note: at this scale the texture mostly helps by giving air more surface to heat, not by trapping light the way scales do.</li>
-        <li><strong>Light over heavy.</strong> Foam board with foil tape for the flaps instead of 3D-printed panels: lighter, faster to build, and cheaper.</li>
-        <li><strong>Simple over advanced.</strong> One sensor, one fan, one vent. Cost and lack of training are what stop people from adopting dryers, so we kept it buildable.</li>
-        <li><strong>Flaps double as a cover.</strong> When folded shut, they protect against rain and pests, which addresses the biggest open-air drying problems.</li>
+        <li><strong>Wheels instead of legs.</strong> Oscillating legs need careful stroke timing and more motors. Continuously spinning wheels on two motors are simpler, cheaper, and easier to control, while still letting the robot turn and spin.</li>
+        <li><strong>Simple over advanced.</strong> Earlier beetle robots used flexible paddles with tuned beat patterns (Jia et al., 2015), and researchers note that beetle robots often need many motors and complex controls (Ding et al., 2025). We kept it to two motors and on/off logic.</li>
+        <li><strong>A food container for a hull.</strong> Light, waterproof, buoyant and roomy enough for the electronics, at the cost of a boxy, non-streamlined shape.</li>
       </ul>
+    </div>
+
+    <div class="cs-section" id="build">
+      <p class="section-label">How we built it</p>
+      <ol class="cs-list cs-list--steps">
+        <li>Marked the waterline on the container so the paddle wheels would sit at the right depth.</li>
+        <li>Melted shaft holes through the walls with a glue gun.</li>
+        <li>Mounted 3D-printed paddle wheels on two TT DC gear motors.</li>
+        <li>Secured the Arduino, motor driver, and battery packs inside with foam weatherstrip tape.</li>
+        <li>Sealed every shaft hole with silicone to keep water out.</li>
+      </ol>
+      <div class="figure-row">
+        <figure class="figure" style="flex:1 1 300px;">
+          <img src="../../assets/images/whirligig/robot-inside.jpg" alt="Top-down view inside the robot: Arduino Uno, breadboard with motor driver, battery packs on foam tape, and a yellow gear motor at each end">
+          <figcaption>Inside the hull: Arduino, DRV8833 driver, batteries, and a motor at each end.</figcaption>
+        </figure>
+        <figure class="figure" style="flex:1 1 220px;">
+          <img src="../../assets/images/whirligig/paddle-wheel.jpg" alt="A white 3D-printed paddle wheel with six flat blades, attached to the side of the container">
+          <figcaption>One of the 3D-printed paddle wheels.</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="cs-section" id="how-it-works">
       <p class="section-label">How it works</p>
-      <ol class="cs-list cs-list--steps">
-        <li>Sunlight passes through the clear lid and heats the black panel at the bottom.</li>
-        <li>Warm air rises through the fruit trays and carries moisture out a high vent.</li>
-        <li>The white flaps bounce extra sunlight in.</li>
-        <li>A temperature sensor near the top tray feeds the Arduino, which runs everything: it angles the flaps out to catch more sun when the box is too cool, and when it’s too hot it closes the flaps, opens the vent and turns on the fan. The fruit dries without cooking.</li>
-      </ol>
+      <p class="cs-body">An Arduino Uno sends signals to a DRV8833 motor driver, which powers each paddle motor separately. Two stacked 4×AA packs supply 12 V to the Arduino and a 6 V tap, through an on/off switch, to the motors.</p>
+      <figure class="figure">
+        <img src="../../assets/images/whirligig/wiring-diagram.jpg" alt="Wiring diagram: Arduino pins 5, 6, 9 and 10 connect to the DRV8833 inputs; its outputs drive the left and right TT gear motors; two 6 V battery packs supply 12 V to the Arduino and 6 V through a switch to the driver">
+        <figcaption>Wiring: Arduino → DRV8833 → left and right motors, with a shared ground.</figcaption>
+      </figure>
+      <p class="cs-body">Running the motors in different combinations gives three swimming patterns, each modeled on how the beetle uses its paddles:</p>
+      <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead>
+            <tr><th>Pattern</th><th>Motors</th><th>Beetle behavior</th><th>What happened</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Forward</td><td>Both on</td><td>Synchronized paddling</td><td>Floated and moved well in a straight line</td></tr>
+            <tr><td>Spin</td><td>One on</td><td>Circling on the surface</td><td>Spun in place</td></tr>
+            <tr><td>Zig-zag</td><td>Take turns</td><td>Quick alternating turns</td><td>Best overall movement, though slower</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cs-section" id="testing">
+      <p class="section-label">Testing</p>
+      <p class="cs-body">We tested in four stages, each one gating the next: a <strong>bench test</strong> of the motors and code out of water, a <strong>leak test</strong> of the sealed shaft holes, a <strong>float test</strong> with every component loaded, and a full <strong>water test</strong> of each pattern in the fountain. The robot stayed dry, floated level, and completed all three patterns.</p>
+    </div>
+
+    <div class="cs-section" id="limits">
+      <p class="section-label">Where it fell short</p>
+      <ul class="cs-list">
+        <li><strong>Drag vs. lift:</strong> our wheels only push water backward. The beetle’s lift-based strokes are faster and more efficient.</li>
+        <li><strong>2 wheels vs. 4 legs:</strong> the beetle adjusts four legs every stroke; we control two wheel speeds, so our turns are less precise.</li>
+        <li><strong>Shape and scale:</strong> a boxy 21 cm hull isn’t a streamlined 1 cm oval, and drag grows with size, so the same idea behaves differently.</li>
+      </ul>
     </div>
 
     <div class="cs-section" id="next">
       <p class="section-label">What’s next</p>
       <ul class="cs-list">
-        <li>Demo next week. Results, photos and test data coming soon.</li>
-        <li><strong>Real users:</strong> get feedback from Berkeley Food Network on whether it fits how they handle surplus produce, then explore a pilot</li>
+        <li><strong>Streamline the hull</strong> into the beetle’s oval shape</li>
+        <li><strong>Add hair-like fringes</strong> to the paddles, like the beetle’s legs, for extra thrust</li>
+        <li><strong>Remote control</strong>, so it can steer around obstacles instead of following a preset path</li>
+        <li><strong>A diving mechanism</strong> for moving underwater</li>
+      </ul>
+    </div>
+
+    <div class="cs-section" id="sources">
+      <p class="section-label">Sources</p>
+      <ul class="cs-list">
+        <li>Sun, Y., et al. (2024). Whirligig beetle uses lift-based thrust for fastest insect swimming. <em>Current Biology</em>, 34(1), R12–R15. <a href="https://doi.org/10.1016/j.cub.2023.11.008" target="_blank" rel="noopener">doi</a></li>
+        <li>Jia, X., et al. (2015). Energy-efficient surface propulsion inspired by whirligig beetles. <em>IEEE Transactions on Robotics</em>, 31(6), 1432–1443. <a href="https://doi.org/10.1109/TRO.2015.2493501" target="_blank" rel="noopener">doi</a></li>
+        <li>Ding, J., et al. (2025). The design, modeling, and experiment of a novel diving-beetle-inspired paddling propulsion robot. <em>Biomimetics</em>, 10(3), 182. <a href="https://doi.org/10.3390/biomimetics10030182" target="_blank" rel="noopener">doi</a></li>
+        <li>Mudryk, K. (2024). A recipe for speed. <em>Nature Physics</em>, 20(2), 181. <a href="https://doi.org/10.1038/s41567-024-02414-2" target="_blank" rel="noopener">doi</a></li>
       </ul>
     </div>
 
