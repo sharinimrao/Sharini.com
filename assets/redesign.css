@@ -148,9 +148,6 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 @media (prefers-reduced-motion: reduce) {
   .project-card, .project-thumb img { transition: none; }
 }
-/* cards without a case study link stay put on hover */
-.project-card--static:hover { transform: rotate(-0.5deg); box-shadow: var(--shadow); }
-.project-card--static:hover .project-thumb img { transform: none; }
 
 .section-intro { font-size: 13px; color: var(--ink-faint); margin: -4px 0 18px; }
 .projects-grid--compact { gap: 20px; }
