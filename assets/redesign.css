@@ -31,9 +31,9 @@
 
 .brand {
   font-family: var(--script);
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 1;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
   color: var(--ink);
   white-space: nowrap;
 }
@@ -515,7 +515,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 @media (max-width: 560px) {
   .collage-card { padding: 44px 22px 36px; }
   .smiley-sticker { width: 56px; height: 56px; top: 20px; right: 18px; }
-  .brand { font-size: 27px; }
+  .brand { font-size: 24px; }
   .nav-links { gap: 4px 18px; }
 }
 
