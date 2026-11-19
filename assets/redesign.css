@@ -31,11 +31,11 @@
 
 .brand {
   font-family: var(--script);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 0.85;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
   color: var(--ink);
-  transform: rotate(-2deg);
+  white-space: nowrap;
 }
 .nav-links { display: flex; flex-wrap: wrap; gap: 8px 36px; list-style: none; }
 .nav-links a {
@@ -408,7 +408,7 @@ footer::before {
   .info-block:has(.book-list) { padding: 28px 24px; }
   .book-list { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px 16px; }
   .info-block:has(.exp-item) { padding: 28px 20px 20px; }
-  .topbar-inner { justify-content: center; }
+  .topbar-inner { justify-content: flex-start; gap: 6px 24px; }
 }
 
 /* ===== Margins page ===== */
@@ -515,7 +515,7 @@ a.margin-card:hover { transform: rotate(0deg) translateY(-3px); }
 @media (max-width: 560px) {
   .collage-card { padding: 44px 22px 36px; }
   .smiley-sticker { width: 56px; height: 56px; top: 20px; right: 18px; }
-  .brand { font-size: 22px; }
+  .brand { font-size: 27px; }
   .nav-links { gap: 4px 18px; }
 }
 
