@@ -2,7 +2,7 @@
    Shared tokens + reusable signature classes. Imported by redesign.css and style.css.
    Each signature class also lists the existing page classes it styles, so the
    markup stays untouched (e.g. `.torn-card, .hero`). */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Gaegu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400&family=Gaegu:wght@700&display=swap');
 
 :root {
   /* white + cobalt palette (was beige + butter yellow) */
@@ -18,6 +18,7 @@
 
   --ink-soft:    #3A3B42;
   --ink-faint:   #63656E;
+  --meta:        #6b6b6b; /* monospace metadata + nav */
   --shadow:      0 6px 18px rgba(20,24,48,0.16);
   --shadow-sm:   0 3px 10px rgba(20,24,48,0.12);
   --tape-light:  rgba(214,220,235,0.75);
@@ -25,9 +26,9 @@
   --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .22 0 0 0 0 .3 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
   --hand: 'Fraunces', Georgia, serif;
-  --type: 'Nunito', system-ui, -apple-system, sans-serif;
-  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace; /* small labels and tags */
-  --script: 'Gaegu', 'Comic Sans MS', cursive; /* handwritten accents only */
+  --type: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace; /* ONLY small metadata labels + top nav */
+  --script: 'Gaegu', 'Comic Sans MS', cursive; /* ONLY the name/logo in the top-left */
 
   --max: 1180px;
   --gutter: 24px;
@@ -118,24 +119,6 @@ img { max-width: 100%; display: block; }
 }
 .polaroid img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--sage); }
 
-/* ===== 4. project card ===== */
-.project-card {
-  position: relative;
-  background: var(--white-paper);
-  padding: 16px 16px 24px;
-  box-shadow: var(--shadow);
-  transform: rotate(-1.5deg);
-}
-.project-card .project-title,
-.project-card .card-title {
-  font-family: var(--hand);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.15;
-}
-.project-card .project-sub,
-.project-card .meta { font-family: var(--type); font-size: 13px; color: var(--ink-faint); }
-
 /* ===== 5. sticky note ===== */
 .sticky-note {
   position: relative;
@@ -168,8 +151,8 @@ img { max-width: 100%; display: block; }
     repeating-linear-gradient(transparent 0 31px, rgba(90,140,200,0.28) 31px 32px);
   background-position: 0 0, 0 8px;
   padding: 24px 24px 24px 56px;
-  font-family: var(--script);
-  font-size: 20px;
+  font-family: var(--type);
+  font-size: 17px;
   line-height: 32px;
   box-shadow: var(--shadow-sm);
 }
@@ -191,9 +174,9 @@ img { max-width: 100%; display: block; }
   display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
   min-height: 44px;
   padding: 0 22px;
-  font-family: var(--mono);
-  font-weight: 600;
-  font-size: 14px;
+  font-family: var(--type);
+  font-weight: 500;
+  font-size: 15px;
   color: var(--paper);
   background: var(--ink);
   border: 2px solid var(--ink);
@@ -207,17 +190,17 @@ img { max-width: 100%; display: block; }
 .btn:not(.btn-solid) {
   display: inline-flex; align-items: center; gap: 0.4rem;
   min-height: 44px;
-  font-family: var(--mono);
-  font-weight: 600;
-  font-size: 14px;
+  font-family: var(--type);
+  font-weight: 500;
+  font-size: 15px;
   color: var(--ink);
   background: none;
   border: none;
   border-radius: 0;
   padding: 0;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 .btn-link::after { content: ' →'; }
 .btn-link:hover,
