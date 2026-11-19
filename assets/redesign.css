@@ -145,7 +145,10 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
   align-items: start;
 }
 
-.project { min-width: 0; }
+.project { position: relative; min-width: 0; }
+/* the whole card links to its case study */
+.project-title a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.project:hover .project-title a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 /* thumbnails: one treatment for every project */
 .project-thumb {
